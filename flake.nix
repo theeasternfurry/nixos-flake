@@ -29,12 +29,19 @@
       overlays = import ./overlays;
 
       nixosConfigurations = {
+        amd-pc = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs system; };
+
+          modules = [
+            ./nixos/hardware/amd-pc/config.nix
+          ];
+        };
+
         nixos-dell = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs system; };
 
           modules = [
-            # My configuration
-            ./nixos/configuration.nix
+            ./nixos/hardware/dell-vostro-intel/config.nix
           ];
         };
       };

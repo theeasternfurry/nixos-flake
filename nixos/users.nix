@@ -34,7 +34,6 @@
 
         # Tools
         alacritty-graphics   # Terminal
-        bluetuith            # Terminal bluetooth tool
         bottom               # terminal system tool
         cmus                 # Music player terminal
         fastfetch            # Fetch system tools
