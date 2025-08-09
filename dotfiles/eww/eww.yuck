@@ -1,0 +1,58 @@
+(defwindow wmbar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "80%"
+                      :height "34px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "30px")
+  (mainbar))
+
+(defwidget mainbar []
+  (centerbox :orientation "h"
+    (workspaces)
+    (windowfocus)
+    (sidestuff)))
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly false 
+       :halign "left"
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 1 true\"" 1)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 2 true\"" 2)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 3 true\"" 3)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 4 true\"" 4)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 5 true\"" 5)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 6 true\"" 6)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 7 true\"" 7)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 8 true\"" 8)
+    (button :class "button"
+            :onclick "leftwm command \"GoToTag 9 true\"" 9)))
+
+(defwidget sidestuff []
+  (box :class "sidestuff"
+       :orientation "h"
+       :space-evenly false
+       :halign "end"
+    (systray :icon 16
+             :orientation "h")))
+
+(defwidget windowfocus []
+  (box :class "windowfocus"
+       :orientation "h"
+       :space-evenly false
+       :halign "center"
+    time))
+
+(defpoll time :interval "30s"
+  "date '+%H:%M'")

@@ -1,0 +1,16 @@
+[font.normal]
+family = "caskaydiacove nerd font"
+style = "Regular"
+
+[font.bold]
+family = "caskaydiacove nerd font"
+style = "Bold"
+
+[font.italic]
+family = "caskaydiacove nerd font"
+style = "Italic"
+
+[font.bold_italic]
+family = "caskaydiacove nerd font"
+style = "Bold Italic"
+

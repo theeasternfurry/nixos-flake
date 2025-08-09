@@ -1,0 +1,14 @@
+import = [
+  "~/.config/alacritty/themes/breeze.toml",
+  "~/.config/alacritty/fonts/caskaydia-cove.toml"
+]
+
+[shell]
+program = "fish"
+args = ["-l"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 7.0
