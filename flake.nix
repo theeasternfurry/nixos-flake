@@ -32,7 +32,7 @@
           ];
         };
 
-        nixos-dell = nixpkgs.lib.nixosSystem {
+        dell-vostro-intel = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs system; };
 
           modules = [
