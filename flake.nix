@@ -6,10 +6,6 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
-    nixvim = {
-      url = "github:goatastronaut0212/nixvim-flake-config";
-    };
-
     niri = {
       url = "github:YaLTeR/niri";
     };
@@ -18,7 +14,6 @@
   outputs = {
     self,
     nixpkgs,
-    nixvim,
     niri
   }@inputs:
     let

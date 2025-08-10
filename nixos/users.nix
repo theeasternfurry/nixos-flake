@@ -1,4 +1,4 @@
-{  pkgs, inputs, system, ... }:
+{ pkgs, system, ... }:
 
 {
   users.users = {
@@ -28,7 +28,6 @@
         papirus-icon-theme
 
         # Internet
-        brave
         firefox
         element-desktop
 
@@ -38,7 +37,7 @@
         cmus                 # Music player terminal
         fastfetch            # Fetch system tools
         fuzzel               # Menu
-        gparted
+        helix                # Terminal text editor
         lsd                  # ls with icons
         nwg-look             # Change apperance
         powerline-go         # Powerline with icons
@@ -52,8 +51,6 @@
         code-cursor-fhs
         protonvpn-gui
         legcord
-      ] ++ [
-        inputs.nixvim.packages."${system}".default
       ];
     };
   };
