@@ -47,6 +47,7 @@
         waybar
         xwayland-satellite
         yazi
+        zellij               # Window multipletex
 
         code-cursor-fhs
         protonvpn-gui
