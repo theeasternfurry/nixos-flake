@@ -5,15 +5,6 @@
   #};
 
   custom-packages = final: prev: {
-    dqlite = prev.dqlite.overrideAttrs {
-      patches = [
-        (prev.fetchpatch2 {
-          url = "https://github.com/canonical/dqlite/commit/be453628ce782167f6652c055e600908e2641da7.patch?full_index=1";
-          hash = "sha256-5DvZ1TW6QmE/heh/RjV395gSgwKM5XnqxqznfYQPC/Y=";
-        })
-      ];
-    };
-
     /*
     linux-firmware = prev.linux-firmware.overrideAttrs {
       compressFirmware = false;
