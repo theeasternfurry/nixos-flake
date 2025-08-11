@@ -38,6 +38,9 @@
 
     ../../nix-ld.nix
 
+    # Users
+    ./users.nix
+
     ../../xorg.nix
     ../../users.nix
     ../../xdg.nix
