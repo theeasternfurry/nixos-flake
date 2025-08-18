@@ -39,7 +39,7 @@
     ../../nix-ld.nix
 
     ../../xorg.nix
-    ../../users.nix
+    ./users.nix
     ../../xdg.nix
   ];
 
