@@ -20,8 +20,19 @@
       inherit (self) outputs;
 
       system = "x86_64-linux";
+      
+      # Apply overlays to nixpkgs
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ outputs.overlays.custom-packages ];
+      };
     in {
       overlays = import ./overlays;
+
+      packages.${system} = {
+        fcitx5 = pkgs.fcitx5;
+        fcitx5-unikey = pkgs.fcitx5-unikey;
+      };
 
       nixosConfigurations = {
         amd-pc = nixpkgs.lib.nixosSystem {
