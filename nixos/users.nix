@@ -19,6 +19,7 @@
         bruno
         dbeaver-bin
         drawio
+        godot
         obs-studio
         krita
         gnome-disk-utility
