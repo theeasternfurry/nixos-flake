@@ -23,6 +23,9 @@
         krita
         gnome-disk-utility
 
+        # Games
+        prismlauncher
+
         # Icons
         catppuccin-cursors.latteLight
         papirus-icon-theme
