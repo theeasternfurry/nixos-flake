@@ -23,6 +23,7 @@
         obs-studio
         krita
         gnome-disk-utility
+        libreoffice
 
         # Games
         prismlauncher
