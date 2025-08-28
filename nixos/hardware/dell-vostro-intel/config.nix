@@ -44,7 +44,7 @@
   ];
 
   nixpkgs = {
-    overlays = [ outputs.overlays.custom-packages ];
+    overlays = [ outputs.overlays.dell-vostro-intel-packages ];
 
     # Configure your nixpkgs instance
     config = { allowUnfree = true; };
