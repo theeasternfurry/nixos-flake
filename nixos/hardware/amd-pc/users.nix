@@ -87,6 +87,7 @@
         bottom               # terminal system tool
         fuzzel               # Menu
         helix                # Terminal text editor
+        kdePackages.ark    
         lsd                  # ls with icons
         nwg-look             # Change apperance
         powerline-go         # Powerline with icons
