@@ -11,12 +11,14 @@
         "input"
         "libvirtd"
         "networkmanager"
+        "render"
         "video"
         "wheel"
       ];
       packages = with pkgs;  [
         # Development
         bruno
+        blender-hip
         dbeaver-bin
         drawio
         godot
@@ -65,13 +67,13 @@
       extraGroups = [
         "audio"
         "input"
-        "libvirtd"
         "networkmanager"
+        "render"
         "video"
       ];
       packages = with pkgs;  [
         # Development
-        blender
+        blender-hip
 
         # Icons
         catppuccin-cursors.latteLight
