@@ -21,6 +21,7 @@
     ../../virtualisation.nix
 
     # Window Manager
+    ../../windowmanager/hyprland.nix
     ../../windowmanager/niri.nix
 
     # Services
