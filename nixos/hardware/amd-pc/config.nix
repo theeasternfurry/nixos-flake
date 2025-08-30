@@ -46,7 +46,7 @@
   ];
 
   nixpkgs = {
-    overlays = [ outputs.overlays.custom-packages ];
+    overlays = [ outputs.overlays.amd-pc-packages ];
 
     # Configure your nixpkgs instance
     config = { allowUnfree = true; };

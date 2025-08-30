@@ -34,4 +34,17 @@
       '';
     };
   };
+
+  amd-pc-packages = final: prev: {
+    linux-firmware = prev.linux-firmware.overrideAttrs {
+      installPhase = ''
+        mkdir -p $out/lib/firmware/intel
+
+        cp -r amd-ucode $out/lib/firmware
+        cp -r amdgpu $out/lib/firmware
+        install iwlwifi-3168-29.ucode $out/lib/firmware
+        install intel/ibt-hw-37.8.10-fw-22.50.19.14.f.bseq $out/lib/firmware/intel
+      '';
+    };   
+  };
 }
