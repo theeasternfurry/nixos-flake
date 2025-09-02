@@ -3,8 +3,10 @@
 {
   services.printing = {
     enable = true;
-    drivers = [
-      pkgs.canon-capt
+    drivers = with pkgs; [
+      canon-capt
+      cups-browsed
+      cups-filters
     ];
   };
 }

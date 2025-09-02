@@ -7,6 +7,7 @@
       description = "theeasternfurry";
       extraGroups = [
         "audio"
+        "cups"
         "docker"
         "input"
         "libvirtd"
@@ -46,6 +47,7 @@
         swww                 # Image
         termusic             # Terminal Rust music player
         xfce.thunar          # File manager
+        vlc
         waybar
         xwayland-satellite
         yazi
