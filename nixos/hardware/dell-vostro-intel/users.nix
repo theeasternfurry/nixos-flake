@@ -32,6 +32,7 @@
         brave
         firefox
         element-desktop
+        microsoft-edge
 
         # Tools
         alacritty-graphics   # Terminal
@@ -40,6 +41,7 @@
         fastfetch            # Fetch system tools
         fuzzel               # Menu
         helix                # Terminal text editor
+        kid3                 # Music tagger
         lsd                  # ls with icons
         nwg-look             # Change apperance
         powerline-go         # Powerline with icons
