@@ -42,6 +42,7 @@
         lsd                  # ls with icons
         nwg-look             # Change apperance
         powerline-go         # Powerline with icons
+        quickshell           # Quickshell
         swww                 # Image
         termusic             # Terminal Rust music player
         xfce.thunar          # File manager

@@ -9,12 +9,18 @@
     niri = {
       url = "github:YaLTeR/niri";
     };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
-    niri
+    niri,
+    quickshell
   }@inputs:
     let
       inherit (self) outputs;
@@ -28,11 +34,6 @@
       };
     in {
       overlays = import ./overlays;
-
-      packages.${system} = {
-        fcitx5 = pkgs.fcitx5;
-        fcitx5-unikey = pkgs.fcitx5-unikey;
-      };
 
       nixosConfigurations = {
         amd-pc = nixpkgs.lib.nixosSystem {
