@@ -21,6 +21,12 @@
   };
 
   dell-vostro-intel-packages = final: prev: {
+    cataclysm-dda-git = prev.cataclysm-dda-git.override {
+      version = "2025-09-12";
+      rev = "d32ffbc1305bdf727b431177fc64aea4bcb944f5";
+      sha256 = "sha256-4rGHWqdJnTi7UMdlSXHl0mc9pMNG/vM3wWafi/h+eM8=";
+    };
+    
     linux-firmware = prev.linux-firmware.overrideAttrs {
       installPhase = ''
         mkdir -p $out/lib/firmware/intel

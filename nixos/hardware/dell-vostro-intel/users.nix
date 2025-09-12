@@ -20,9 +20,13 @@
         bruno
         dbeaver-bin
         drawio
+        godot
         obs-studio
         krita
         gnome-disk-utility
+
+        # Games
+        cataclysm-dda-git
 
         # Icons
         catppuccin-cursors.latteLight
