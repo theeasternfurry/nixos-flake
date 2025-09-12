@@ -1,5 +1,5 @@
 {
-  #services.desktopManager.cosmic.enable = true;
-  #services.displayManager.cosmic-greeter.enable = true;
-  services.xserver.displayManager.startx.enable = true;
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
+  #services.xserver.displayManager.startx.enable = true;
 }
