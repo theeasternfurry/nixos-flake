@@ -22,9 +22,9 @@
 
   dell-vostro-intel-packages = final: prev: {
     cataclysm-dda-git = prev.cataclysm-dda-git.override {
-      version = "2025-09-12";
-      rev = "d32ffbc1305bdf727b431177fc64aea4bcb944f5";
-      sha256 = "sha256-4rGHWqdJnTi7UMdlSXHl0mc9pMNG/vM3wWafi/h+eM8=";
+      version = "2025-09-14";
+      rev = "f50f8da8f4ca4daef573a19e6394b3428ea53a3f";
+      sha256 = "sha256-XElwuRCSi+V3QXr9kDXQ43kXxIMirJEvMxgbd4gY+TU=";
     };
     
     linux-firmware = prev.linux-firmware.overrideAttrs {
@@ -39,6 +39,49 @@
         install rtl_nic/rtl8168h-2.fw $out/lib/firmware/rtl_nic
       '';
     };
+
+    /*
+    openrgb = prev.openrgb.overrideAttrs {
+      version = "unstable-git";
+      src = prev.fetchFromGitLab {
+        owner = "theeasternfurry";
+        repo = "OpenRGB";
+        rev = "0a6930945ef4f7c75fe61207b9bb665ad89c6a46";
+        hash = "sha256-w0fJIcZ2MdcvRsG4nszkUL5ANjI5Da/L0BgK5Mpn50I=";
+      };
+
+      postPatch = '''';
+    };
+    openrgb-plugin-effects = prev.openrgb-plugin-effects.overrideAttrs {
+      version = "unstable-git";
+      src = prev.fetchFromGitLab {
+        owner = "OpenRGBDevelopers";
+        repo = "OpenRGBEffectsPlugin";
+        rev = "6cf3f445b050941d9dc17d1ab66575daa4360885";
+        hash = "sha256-Dd3t8ABspxyDGzRKBl0ZX3jFFQqEm5VAfAZSqksm4eU=";
+        fetchSubmodules = true;
+      };
+      postPatch = '''';
+
+      buildInputs = [
+        prev.libsForQt5.qt5.qtbase
+        prev.glib
+        prev.openal
+        prev.pipewire.dev
+      ];
+    };
+    openrgb-plugin-hardwaresync = prev.openrgb-plugin-hardwaresync.overrideAttrs {
+      version = "unstable-git";
+      src = prev.fetchFromGitLab {
+        owner = "OpenRGBDevelopers";
+        repo = "OpenRGBHardwareSyncPlugin";
+        rev = "a7c2830f4c100ec900b653e4b99f5cde7becd787";
+        hash = "sha256-mcKKn/MaIQe2R8FZbzwr0F/So7PY4kf8TgkwMt2K1K4=";
+        fetchSubmodules = true;
+      };
+      postPatch = '''';
+    };
+    */
   };
 
   amd-pc-packages = final: prev: {
