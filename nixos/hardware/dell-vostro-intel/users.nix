@@ -1,4 +1,4 @@
-{ pkgs, system, ... }:
+{ pkgs, system, inputs, ... }:
 
 {
   users.users = {
@@ -14,6 +14,7 @@
         "networkmanager"
         "video"
         "wheel"
+        "wireshark"
       ];
       packages = with pkgs;  [
         # Development
@@ -24,6 +25,7 @@
         obs-studio
         krita
         gnome-disk-utility
+        wireshark
 
         # Games
         cataclysm-dda-git
@@ -49,7 +51,7 @@
         lsd                  # ls with icons
         nwg-look             # Change apperance
         powerline-go         # Powerline with icons
-        quickshell           # Quickshell
+        quickgui
         swww                 # Image
         termusic             # Terminal Rust music player
         xfce.thunar          # File manager
@@ -62,6 +64,9 @@
         code-cursor-fhs
         protonvpn-gui
         legcord
+      ] ++ [
+        inputs.noctalia.packages.${system}.default
+        inputs.quickshell.packages.${system}.default
       ];
     };
   };
