@@ -25,7 +25,6 @@
     ../../windowmanager/niri.nix
 
     # Services
-    ../../services/blueman.nix
     ../../services/flatpak.nix
     ../../services/openrgb.nix
     ../../services/playetctld.nix
