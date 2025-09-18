@@ -22,9 +22,9 @@
 
   dell-vostro-intel-packages = final: prev: {
     cataclysm-dda-git = prev.cataclysm-dda-git.override {
-      version = "2025-09-14";
-      rev = "f50f8da8f4ca4daef573a19e6394b3428ea53a3f";
-      sha256 = "sha256-XElwuRCSi+V3QXr9kDXQ43kXxIMirJEvMxgbd4gY+TU=";
+      version = "2025-09-17";
+      rev = "683a8c9ce08fe264381f40722dd2496c7135489e";
+      sha256 = "sha256-tGUSVn+HRKBdxAT4qZphyloBN7lh7VImST2khdh0lf4=";
     };
     
     linux-firmware = prev.linux-firmware.overrideAttrs {
