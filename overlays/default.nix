@@ -22,20 +22,30 @@
 
   dell-vostro-intel-packages = final: prev: {
     cataclysm-dda-git = prev.cataclysm-dda-git.override {
-      version = "2025-09-17";
-      rev = "683a8c9ce08fe264381f40722dd2496c7135489e";
-      sha256 = "sha256-tGUSVn+HRKBdxAT4qZphyloBN7lh7VImST2khdh0lf4=";
+      version = "2025-09-19";
+      rev = "5fd4a4066ca0ee2183977cb7dccbc9b7e5b7c7e3";
+      sha256 = "sha256-OOeXsklsmT0nMC32tKXLJNYzUYAQg/8ixCcZly7QT1A=";
     };
     
     linux-firmware = prev.linux-firmware.overrideAttrs {
       installPhase = ''
         mkdir -p $out/lib/firmware/intel
+        mkdir -p $out/lib/firmware/intel/iwlwifi
         mkdir -p $out/lib/firmware/i915
         mkdir -p $out/lib/firmware/rtl_nic
-        install iwlwifi-QuZ-a0-jf-b0-77.ucode  $out/lib/firmware
+
+        # Wifi firmware
+        install intel/iwlwifi/iwlwifi-QuZ-a0-jf-b0-77.ucode $out/lib/firmware/intel/iwlwifi
+        ln -s $out/lib/firmware/intel/iwlwifi/iwlwifi-QuZ-a0-jf-b0-77.ucode $out/lib/firmware/iwlwifi-QuZ-a0-jf-b0-77.ucode
+
+        # Card
         install i915/tgl_dmc_ver2_12.bin $out/lib/firmware/i915
+
+        # Bluetooth
         install intel/ibt-19-0-0.sfi $out/lib/firmware/intel
         install intel/ibt-19-0-0.ddc $out/lib/firmware/intel
+
+        # Realtek sd card reader
         install rtl_nic/rtl8168h-2.fw $out/lib/firmware/rtl_nic
       '';
     };
