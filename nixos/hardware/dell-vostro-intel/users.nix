@@ -1,5 +1,8 @@
 { pkgs, system, inputs, ... }:
 
+let
+  termusic = pkgs.callPackage ../../../pkgs/termusic.nix {};
+in
 {
   users.users = {
     theeasternfurry = {
@@ -20,6 +23,7 @@
         # Development
         bruno
         dbeaver-bin
+        devenv
         drawio
         godot
         obs-studio
