@@ -1,4 +1,4 @@
-{ pkgs, system, ... }:
+{ pkgs, inputs, system, ... }:
 
 {
   users.users = {
@@ -70,6 +70,7 @@
         "networkmanager"
         "render"
         "video"
+        "wheel"
       ];
       packages = with pkgs;  [
         # Development
@@ -86,16 +87,15 @@
         # Tools
         alacritty-graphics   # Terminal
         bottom               # terminal system tool
-        fuzzel               # Menu
         helix                # Terminal text editor
         kdePackages.ark    
         lsd                  # ls with icons
         nwg-look             # Change apperance
         powerline-go         # Powerline with icons
-        swww                 # Image
         xfce.thunar          # File manager
-        waybar
         xwayland-satellite
+      ] ++ [
+        inputs.noctalia.packages.${system}.default
       ];
     };
   };
