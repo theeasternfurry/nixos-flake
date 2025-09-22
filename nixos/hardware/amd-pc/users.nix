@@ -74,6 +74,7 @@
       packages = with pkgs;  [
         # Development
         blender-hip
+        godot
 
         # Icons
         catppuccin-cursors.latteLight
