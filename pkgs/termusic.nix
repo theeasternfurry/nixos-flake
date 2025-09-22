@@ -19,10 +19,10 @@ rustPlatform.buildRustPackage rec {
   version = "unstable";
 
   src = fetchFromGitHub {
-    owner = "hasezoey";
+    owner = "tramhao";
     repo = "termusic";
-    rev = "bf0f0efdd134892dcabdf0191e67a49d16b956ca";
-    hash = "sha256-iWVPDx32x4B3P1zEnaEkZnkymI8kcz58nvLJdNh1/Lo=";
+    rev = "a703b5ab275944ed9081a9ad871976d70b2ac299";
+    hash = "sha256-B7rvQECk6eq6hGiJ6tYD6QX4Y5mIjGYKu0oU5Cu9Kgc=";
   };
 
   cargoHash = "sha256-VMbgM86dGskl/cZA7QJNQFAzrw1vbWQNusMoYcqaCN0=";
