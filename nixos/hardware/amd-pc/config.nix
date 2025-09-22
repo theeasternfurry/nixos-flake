@@ -46,7 +46,10 @@
   ];
 
   nixpkgs = {
-    overlays = [ outputs.overlays.amd-pc-packages ];
+    overlays = [
+      outputs.overlays.amd-pc-packages
+      outputs.overlays.lilybloom-studio
+    ];
 
     # Configure your nixpkgs instance
     config = { allowUnfree = true; };
