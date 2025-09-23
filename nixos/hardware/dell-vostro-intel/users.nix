@@ -50,6 +50,7 @@ in
         cmus                 # Music player terminal
         fastfetch            # Fetch system tools
         fuzzel               # Menu
+        joplin-desktop
         helix                # Terminal text editor
         kid3                 # Music tagger
         lsd                  # ls with icons
