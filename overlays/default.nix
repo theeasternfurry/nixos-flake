@@ -25,8 +25,8 @@
       src = prev.fetchFromGitHub {
         owner = "lilybloom-studio";
         repo = "godot";
-        rev = "f0a85de4000ea0927ccfe380cd05235d2fb53c4a";
-        hash = "sha256-OA0O5DRvnPmSyVcDMy1WedHCc+ToYuh+UyVa+3mc27o=";
+        rev = "2e1dc259ede7403f53ba14e21b5948619c415025";
+        hash = "sha256-SXuCDbrLB3p0z4BZPQ361h/GFTJgITtNlVVNFW4sRyM=";
         fetchSubmodules = true;
       };
     };
