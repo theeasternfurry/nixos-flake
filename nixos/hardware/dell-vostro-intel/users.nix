@@ -26,6 +26,7 @@ in
         devenv
         drawio
         godot
+        lmms
         obs-studio
         krita
         gnome-disk-utility
