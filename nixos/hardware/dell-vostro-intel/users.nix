@@ -34,6 +34,7 @@ in
 
         # Games
         cataclysm-dda-git
+        prismlauncher
 
         # Icons
         catppuccin-cursors.latteLight
