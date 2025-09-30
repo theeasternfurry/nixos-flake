@@ -37,11 +37,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1758690382,
-        "narHash": "sha256-NY3kSorgqE5LMm1LqNwGne3ZLMF2/ILgLpFr1fS4X3o=",
+        "lastModified": 1759036355,
+        "narHash": "sha256-0m27AKv6ka+q270dw48KflE0LwQYrO7Fm4/2//KCVWg=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e643668fd71b949c53f8626614b21ff71a07379d",
+        "rev": "e9f00bd893984bc8ce46c895c3bf7cac95331127",
         "type": "github"
       },
       "original": {
@@ -62,11 +62,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1759020048,
-        "narHash": "sha256-zO2Qj/Bkhrac5B8b8rTAr4oE1a3vKILAGEG44Y0xMl4=",
+        "lastModified": 1759188789,
+        "narHash": "sha256-ScNL12oTeqwJlDSadoKJgjsey3X37nzvuoFOYxAZay4=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "fbf80ab57798825adcc2030d8837dac36a6c7d64",
+        "rev": "1f257ce84711b40ac34dbe415d50dacf77cd0ed8",
         "type": "github"
       },
       "original": {
@@ -82,11 +82,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1758273351,
-        "narHash": "sha256-wOv1guIi9THD1NjOtBU2Xh/Avg9xv7nIjsfFSkr1NeQ=",
+        "lastModified": 1759128992,
+        "narHash": "sha256-crjxt1g3zc3OtmE4xfbFouiDwAxqUmRfpTtfnkkJ8/0=",
         "ref": "refs/heads/master",
-        "rev": "e9a574d919a89602d2868621576b2ccae54a5cb0",
-        "revCount": 675,
+        "rev": "1d94144976252a922e03e4c0fbb921ee8b8bb079",
+        "revCount": 682,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
