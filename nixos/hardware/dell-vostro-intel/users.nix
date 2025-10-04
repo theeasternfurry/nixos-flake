@@ -68,7 +68,6 @@ in
         yazi
         zellij               # Window multipletex
 
-        code-cursor-fhs
         protonvpn-gui
         legcord
       ] ++ [
