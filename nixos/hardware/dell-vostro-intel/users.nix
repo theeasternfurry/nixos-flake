@@ -66,6 +66,9 @@ in
         zellij               # Window multipletex
 
          legcord
+
+        # Windows
+        wineWowPackages.stableFull
       ] ++ [
         inputs.nix-nvim.packages.${system}.default
         inputs.noctalia.packages.${system}.default
