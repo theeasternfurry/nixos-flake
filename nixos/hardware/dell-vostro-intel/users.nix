@@ -49,7 +49,6 @@ in
         protonvpn-gui
 
         # Tools
-        alacritty-graphics   # Terminal
         bottom               # terminal system tool
         fastfetch            # Fetch system tools
         joplin-desktop
