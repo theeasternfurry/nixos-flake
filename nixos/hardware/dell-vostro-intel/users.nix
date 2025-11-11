@@ -45,6 +45,7 @@ in
         # Internet
         firefox
         element-desktop
+        materialgram
         microsoft-edge
         protonvpn-gui
 
