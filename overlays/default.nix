@@ -1,21 +1,11 @@
 {
   custom-packages = final: prev: {
-    fcitx5 = prev.fcitx5.overrideAttrs {
-      src = prev.fetchFromGitHub {
-        owner = "fcitx";
-        repo = "fcitx5";
-        rev = "eb502fc89eadf1e955fd2e2c648a646ce930467a";
-        hash = "sha256-zbyvfYaFFI6U+uJ7sfEU/s0zsZEx022mErXSo23NqA8=";
-      };
-    };
-
-    # Use the KDE version of fcitx5-unikey which uses Qt6
     fcitx5-unikey = prev.kdePackages.fcitx5-unikey.overrideAttrs {
       src = prev.fetchFromGitHub {
         owner = "theeasternfurry";
         repo = "fcitx5-unikey";
-        rev = "a7588c9cb69363306ebb92e558db40066de05a9d";
-        hash = "sha256-V0KURczCX3dh6/4C1GF21eXXdFmWUUdIUQegbT7FFK4=";
+        rev = "e5662d38785c904064de46330c0c6d73afbda7d0";
+        hash = "sha256-Yeyk6c4bjsxTi8DvRBGip/gayKaOvO6R5PGYkc0uUdk=";
       };
     };
   };
@@ -42,7 +32,7 @@
       rev = "14d6570b4a3a974c957b7d3c39f33e94506284e7";
       sha256 = "sha256-hGN1x1pTyEdplDpCX4M6Dd+7XHTMaNkBFw8RYCB3eEs=";
     };
-    
+
     linux-firmware = prev.linux-firmware.overrideAttrs {
       installPhase = ''
         mkdir -p $out/lib/firmware/intel
@@ -82,6 +72,6 @@
 
         install intel/ibt-hw-37.8.10-fw-22.50.19.14.f.bseq $out/lib/firmware/intel
       '';
-    };   
+    };
   };
 }

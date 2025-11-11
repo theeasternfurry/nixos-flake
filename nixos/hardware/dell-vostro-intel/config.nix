@@ -21,7 +21,6 @@
     ../../virtualisation.nix
 
     # Window Manager
-    ../../windowmanager/hyprland.nix
     ../../windowmanager/niri.nix
 
     # Services
@@ -45,6 +44,7 @@
 
   nixpkgs = {
     overlays = [
+      outputs.overlays.custom-packages
       outputs.overlays.dell-vostro-intel-packages
       outputs.overlays.lilybloom-studio
     ];
