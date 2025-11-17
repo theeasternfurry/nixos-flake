@@ -17,6 +17,7 @@
     ../../input-method.nix
     ../../nix-features.nix
     ../../no-packages.nix
+    ../../security.nix
     ../../desktop-environment.nix
     ../../virtualisation.nix
 
