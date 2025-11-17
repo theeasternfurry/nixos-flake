@@ -11,7 +11,9 @@
   protobuf,
   rustPlatform,
   sqlite,
+  libopus,
   stdenv,
+  withOpus ? true,
 }:
 
 rustPlatform.buildRustPackage {
@@ -21,13 +23,17 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "tramhao";
     repo = "termusic";
-    rev = "7fd988ab4ef7a0e023a3afaa8c6850a8c0b3979b";
-    hash = "sha256-dJLv6KPbqFSmvZHBBfNmjMKo00bsWPqAaeq88d3HklM=";
+    rev = "d450a92fe19b261e3e7b21593cc4c8f174bb2e14";
+    hash = "sha256-SkdFpzAkd7LWhOdFjRjHX9Scec3N2O8dI3zmMnZL85A=";
   };
 
-  cargoHash = "sha256-eFPKt7stzguVjHZi6zoEQh/gl/iO2x+vvNIUnrkgd68=";
+  cargoHash = "sha256-mh4h4pnD2itKIOmWstrA/fUBunMnOBD8Sva55k8YMgo=";
 
   useNextest = true;
+
+  buildFeatures = [
+    "rusty-libopus"
+  ];
 
   nativeBuildInputs = [
     pkg-config
@@ -45,6 +51,9 @@ rustPlatform.buildRustPackage {
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     alsa-lib
+  ]
+  ++ lib.optionals withOpus [
+    libopus
   ];
 
   meta = {
