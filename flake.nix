@@ -38,12 +38,6 @@
       inherit (self) outputs;
 
       system = "x86_64-linux";
-      
-      # Apply overlays to nixpkgs
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ outputs.overlays.custom-packages nix-nvim.overlays.default ];
-      };
     in {
       overlays = import ./overlays;
 
