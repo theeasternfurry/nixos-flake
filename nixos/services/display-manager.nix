@@ -1,0 +1,3 @@
+{
+  services.displayManager.enable = false;
+}

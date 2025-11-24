@@ -3,6 +3,6 @@
 {
   programs.niri = {
     enable = true;
-    package = inputs.niri.packages.${system}.default;
+    #package = inputs.niri.packages.${system}.default;
   };
 }

@@ -18,14 +18,15 @@
     ../../nix-features.nix
     ../../no-packages.nix
     ../../security.nix
-    ../../desktop-environment.nix
     ../../virtualisation.nix
 
     # Window Manager
     ../../windowmanager/niri.nix
 
     # Services
+    ../../services/display-manager.nix
     ../../services/flatpak.nix
+    ../../services/libinput.nix
     ../../services/openrgb.nix
     ../../services/playetctld.nix
     ../../services/udev.nix
@@ -38,7 +39,6 @@
 
     ../../nix-ld.nix
 
-    ../../xorg.nix
     ./users.nix
     ../../xdg.nix
   ];
