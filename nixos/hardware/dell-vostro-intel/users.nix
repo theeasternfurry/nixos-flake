@@ -30,9 +30,6 @@ in
         obs-studio
         krita
         gnome-disk-utility
-        quickgui
-        wireshark
-        zed-editor-fhs
 
         # Games
         cataclysm-dda-git
@@ -48,9 +45,9 @@ in
         materialgram
         microsoft-edge
         protonvpn-gui
+        legcord
 
         # Tools
-        bottom               # terminal system tool
         fastfetch            # Fetch system tools
         joplin-desktop
         kid3                 # Music tagger
@@ -62,10 +59,10 @@ in
         vlc
         wezterm
         xwayland-satellite
-        yazi
-        zellij               # Window multipletex
 
-         legcord
+        # Terminal development tools
+        lsd         # ls command in rust
+        yazi        # file manager
 
         # Windows
         wineWowPackages.stableFull
