@@ -3,10 +3,10 @@
     username = "theeasternfurry";
     homeDirectory = "/home/theeasternfurry";
 
-    stateVersion = "25.05";
+    stateVersion = "25.11";
   };
 
-  imports = [ ./alacritty.nix ./cursor.nix ./firefox.nix ./helix.nix ./qutebrowser.nix ./xdg.nix ];
+  imports = [ ./zed-editor.nix ];
 
   programs.home-manager.enable = true;
 

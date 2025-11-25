@@ -6,6 +6,11 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-nvim = {
       url = "github:theeasternfurry/nix-nvim";
     };
@@ -29,6 +34,7 @@
   outputs = {
     self,
     nixpkgs,
+    home-manager,
     nix-nvim,
     niri,
     quickshell,
@@ -55,6 +61,12 @@
 
           modules = [
             ./nixos/hardware/dell-vostro-intel/config.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.theeasternfurry = ./home/home.nix;
+            }
           ];
         };
       };
