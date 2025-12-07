@@ -47,7 +47,6 @@
     overlays = [
       outputs.overlays.custom-packages
       outputs.overlays.dell-vostro-intel-packages
-      outputs.overlays.lilybloom-studio
     ];
 
     # Configure your nixpkgs instance
@@ -66,5 +65,5 @@
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }
