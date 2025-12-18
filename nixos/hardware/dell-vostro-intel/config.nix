@@ -31,6 +31,7 @@
     ../../services/playetctld.nix
     ../../services/udev.nix
     ../../services/openssh.nix
+    ../../services/tlp.nix
 
     # Programs
     ../../programs/fish.nix
@@ -52,8 +53,6 @@
     # Configure your nixpkgs instance
     config = { allowUnfree = true; };
   };
-
-  security.polkit.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Ho_Chi_Minh";
