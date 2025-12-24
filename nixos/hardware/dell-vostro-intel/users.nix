@@ -32,7 +32,6 @@ in
         gnome-disk-utility
 
         # Games
-        cataclysm-dda-git
         prismlauncher
 
         # Icons
@@ -41,6 +40,7 @@ in
 
         # Internet
         firefox
+        librewolf
         element-desktop
         materialgram
         microsoft-edge
