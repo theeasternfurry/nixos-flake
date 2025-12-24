@@ -23,11 +23,11 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "tramhao";
     repo = "termusic";
-    rev = "9351335eaa80bd73c461296c38cee283b2cf7ca2";
-    hash = "sha256-aeoxTCwRsYmmf+l5CNI2ucyY0TusN12EsBpCa24pBKQ=";
+    rev = "ba57b4481e2a3d1c99cf3c10b1770396dc9070f2";
+    hash = "sha256-V9kJ9GzYCPlcQi5z5/l3o9rWz6173atJyLsg9NSwsyM=";
   };
 
-  cargoHash = "sha256-yJ8T5cRlTNIqcivE4qZAZJJh7qFqOCsL3dg8XLxAkA0=";
+  cargoHash = "sha256-o9Y+PZsHJuY5MzUj80DbNUi0yTIYXv7caw/X0hIqTWc=";
 
   useNextest = true;
 
