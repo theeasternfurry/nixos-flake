@@ -17,7 +17,6 @@
     ../../input-method.nix
     ../../nix-features.nix
     ../../no-packages.nix
-    ../../desktop-environment.nix
     ../../virtualisation.nix
 
     # Window Manager
@@ -26,8 +25,8 @@
     # Services
     ../../services/flatpak.nix
     ../../services/playetctld.nix
-    ../../services/udev.nix
     ../../services/openssh.nix
+    ../../services/udev.nix
 
     # Programs
     ../../programs/fish.nix
@@ -39,21 +38,17 @@
     # Users
     ./users.nix
 
-    ../../xorg.nix
     ../../xdg.nix
   ];
 
   nixpkgs = {
     overlays = [
       outputs.overlays.amd-pc-packages
-      outputs.overlays.lilybloom-studio
     ];
 
     # Configure your nixpkgs instance
     config = { allowUnfree = true; };
   };
-
-  security.polkit.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Ho_Chi_Minh";
@@ -65,5 +60,5 @@
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
 }
