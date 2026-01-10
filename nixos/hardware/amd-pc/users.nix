@@ -18,7 +18,6 @@
       packages = with pkgs;  [
         # Development
         bruno
-        blender-hip
         dbeaver-bin
         drawio
         godot
@@ -73,7 +72,6 @@
       ];
       packages = with pkgs;  [
         # Development
-        blender-hip
         godot
 
         # Icons
