@@ -25,6 +25,7 @@
     # Services
     ../../services/flatpak.nix
     ../../services/playetctld.nix
+    ../../services/ollama.nix
     ../../services/openssh.nix
     ../../services/udev.nix
 
