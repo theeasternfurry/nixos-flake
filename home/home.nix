@@ -6,7 +6,7 @@
     stateVersion = "25.11";
   };
 
-  imports = [ ./zed-editor.nix ];
+  imports = [ ];
 
   programs.home-manager.enable = true;
 
