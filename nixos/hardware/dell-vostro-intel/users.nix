@@ -48,6 +48,7 @@ in
         legcord
 
         # Tools
+        copyq           # Clipboard
         fastfetch            # Fetch system tools
         joplin-desktop
         kid3                 # Music tagger
