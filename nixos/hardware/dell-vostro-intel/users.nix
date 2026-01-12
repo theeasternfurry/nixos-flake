@@ -23,7 +23,6 @@ in
         # Development
         bruno
         dbeaver-bin
-        devenv
         drawio
         godot
         libreoffice
@@ -49,20 +48,20 @@ in
 
         # Tools
         copyq           # Clipboard
-        fastfetch            # Fetch system tools
         joplin-desktop
         kid3                 # Music tagger
-        lsd                  # ls with icons
         powerline-go         # Powerline with icons
         quickgui
         swww                 # Image
-        termusic             # Terminal Rust music player
         vlc
         wezterm
         xwayland-satellite
 
-        # Terminal development tools
+        # Terminal tools
+        bluetui     # Bluetooth tui
+        fastfetch   # Fetch info system
         lsd         # ls command in rust
+        termusic
         yazi        # file manager
 
         # Windows
