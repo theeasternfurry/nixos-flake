@@ -27,7 +27,6 @@
     ../../services/display-manager.nix
     ../../services/flatpak.nix
     ../../services/libinput.nix
-    ../../services/openrgb.nix
     ../../services/playetctld.nix
     ../../services/udev.nix
     ../../services/openssh.nix
