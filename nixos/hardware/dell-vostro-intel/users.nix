@@ -60,6 +60,7 @@ in
         # Terminal tools
         bluetui     # Bluetooth tui
         fastfetch   # Fetch info system
+        fzf         # Fuzzy finder in Go
         lsd         # ls command in rust
         termusic
         yazi        # file manager
