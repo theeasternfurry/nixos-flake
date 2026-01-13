@@ -15,10 +15,6 @@
       url = "github:theeasternfurry/nix-nvim";
     };
 
-    niri = {
-      url = "github:YaLTeR/niri";
-    };
-
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +36,6 @@
     nixpkgs,
     home-manager,
     nix-nvim,
-    niri,
     quickshell,
     noctalia,
     sops-nix
