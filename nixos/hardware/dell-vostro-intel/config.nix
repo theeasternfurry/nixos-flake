@@ -2,8 +2,10 @@
 
 {
   imports = [
-    # Hardware config
+    # Specific config for dell-vostro-intel
     ./hardware.nix
+    ./zram.nix
+
 
     ../../boot-loader.nix
     ../../printing.nix
