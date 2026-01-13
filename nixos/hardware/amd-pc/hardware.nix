@@ -1,30 +1,49 @@
-{ config, pkgs, lib, modulesPath, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  modulesPath,
+  ...
+}:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [
+    "nvme"
+    "xhci_pci"
+    "ahci"
+    "usb_storage"
+    "usbhid"
+    "sd_mod"
+  ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" "amdgpu" ];
+  boot.kernelModules = [
+    "kvm-amd"
+    "amdgpu"
+  ];
   boot.extraModulePackages = [ ];
   boot.blacklistedKernelModules = [ "radeon" ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/e579b0bb-f24f-42fa-b0d3-ea9db3456a29";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/e579b0bb-f24f-42fa-b0d3-ea9db3456a29";
+    fsType = "ext4";
+  };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/36E9-9106";
-      fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
-
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/0a47e507-1b02-444f-a222-ea9f736dc347"; }
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/36E9-9106";
+    fsType = "vfat";
+    options = [
+      "fmask=0022"
+      "dmask=0022"
     ];
+  };
+
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/0a47e507-1b02-444f-a222-ea9f736dc347"; }
+  ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

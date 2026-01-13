@@ -1,7 +1,12 @@
-{ pkgs, system, inputs, ... }:
+{
+  pkgs,
+  system,
+  inputs,
+  ...
+}:
 
 let
-  termusic = pkgs.callPackage ../../../pkgs/termusic.nix {};
+  termusic = pkgs.callPackage ../../../pkgs/termusic.nix { };
 in
 {
   users.users = {
@@ -19,59 +24,62 @@ in
         "wheel"
         "wireshark"
       ];
-      packages = with pkgs;  [
-        # Development
-        bruno
-        dbeaver-bin
-        drawio
-        godot
-        libreoffice
-        obs-studio
-        krita
-        gnome-disk-utility
+      packages =
+        with pkgs;
+        [
+          # Development
+          bruno
+          dbeaver-bin
+          drawio
+          godot
+          libreoffice
+          obs-studio
+          krita
+          gnome-disk-utility
 
-        # Games
-        prismlauncher
+          # Games
+          prismlauncher
 
-        # Icons
-        catppuccin-cursors.latteLight
-        papirus-icon-theme
+          # Icons
+          catppuccin-cursors.latteLight
+          papirus-icon-theme
 
-        # Internet
-        firefox
-        librewolf
-        element-desktop
-        materialgram
-        microsoft-edge
-        protonvpn-gui
-        legcord
+          # Internet
+          firefox
+          librewolf
+          element-desktop
+          materialgram
+          microsoft-edge
+          protonvpn-gui
+          legcord
 
-        # Tools
-        copyq           # Clipboard
-        joplin-desktop
-        kid3                 # Music tagger
-        powerline-go         # Powerline with icons
-        quickgui
-        swww                 # Image
-        vlc
-        wezterm
-        xwayland-satellite
+          # Tools
+          copyq # Clipboard
+          joplin-desktop
+          kid3 # Music tagger
+          powerline-go # Powerline with icons
+          quickgui
+          swww # Image
+          vlc
+          wezterm
+          xwayland-satellite
 
-        # Terminal tools
-        bluetui     # Bluetooth tui
-        fastfetch   # Fetch info system
-        fzf         # Fuzzy finder in Go
-        lsd         # ls command in rust
-        termusic
-        yazi        # file manager
+          # Terminal tools
+          bluetui # Bluetooth tui
+          fastfetch # Fetch info system
+          fzf # Fuzzy finder in Go
+          lsd # ls command in rust
+          termusic
+          yazi # file manager
 
-        # Windows
-        wineWowPackages.stableFull
-      ] ++ [
-        inputs.nix-nvim.packages.${system}.default
-        inputs.noctalia.packages.${system}.default
-        inputs.quickshell.packages.${system}.default
-      ];
+          # Windows
+          wineWowPackages.stableFull
+        ]
+        ++ [
+          inputs.nix-nvim.packages.${system}.default
+          inputs.noctalia.packages.${system}.default
+          inputs.quickshell.packages.${system}.default
+        ];
     };
   };
 }

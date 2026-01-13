@@ -3,7 +3,7 @@
 {
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    zlib   # numpy
+    zlib # numpy
     libgcc # sqlalchemy
   ];
 }

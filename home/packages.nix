@@ -22,13 +22,13 @@
     papirus-icon-theme
 
     # Terminal system Tool
-    acpid        # A daemon for delivering ACPI events to userspace programs
+    acpid # A daemon for delivering ACPI events to userspace programs
     cage
-    feh          # Image viewer
+    feh # Image viewer
 
     # Graphical system tool
     copyq # clipboard manager
     flameshot # take screen shot
-    kid3        # Audio tagger
+    kid3 # Audio tagger
   ];
 }

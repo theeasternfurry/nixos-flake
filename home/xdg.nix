@@ -2,7 +2,7 @@
   xdg.mimeApps = {
     enable = true;
     associations.added = {
-      "inode/directory" = ["pcmanfm.desktop"];
+      "inode/directory" = [ "pcmanfm.desktop" ];
     };
   };
 }

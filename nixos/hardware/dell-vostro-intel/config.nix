@@ -6,7 +6,6 @@
     ./hardware.nix
     ./zram.nix
 
-
     ../../boot-loader.nix
     ../../printing.nix
     ../../sound.nix
@@ -52,7 +51,9 @@
     ];
 
     # Configure your nixpkgs instance
-    config = { allowUnfree = true; };
+    config = {
+      allowUnfree = true;
+    };
   };
 
   # Set your time zone.

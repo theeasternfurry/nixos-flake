@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # Specific config for amd-pc 
+    # Specific config for amd-pc
     ./hardware.nix
     ./zram.nix
 
@@ -49,7 +49,9 @@
     ];
 
     # Configure your nixpkgs instance
-    config = { allowUnfree = true; };
+    config = {
+      allowUnfree = true;
+    };
   };
 
   # Set your time zone.

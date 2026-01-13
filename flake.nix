@@ -31,20 +31,26 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nix-nvim,
-    quickshell,
-    noctalia,
-    sops-nix
-  }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nix-nvim,
+      quickshell,
+      noctalia,
+      sops-nix,
+    }@inputs:
     let
       inherit (self) outputs;
 
       system = "x86_64-linux";
-    in {
+
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
+      formatter.${system} = pkgs.nixfmt-tree;
+
       overlays = import ./overlays;
 
       nixosConfigurations = {
