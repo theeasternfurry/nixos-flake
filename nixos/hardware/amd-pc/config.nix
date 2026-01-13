@@ -2,8 +2,9 @@
 
 {
   imports = [
-    # Hardware config
+    # Specific config for amd-pc 
     ./hardware.nix
+    ./zram.nix
 
     ../../boot-loader.nix
     ../../printing.nix
@@ -18,7 +19,6 @@
     ../../nix-features.nix
     ../../no-packages.nix
     ../../virtualisation.nix
-    ../../zram.nix
 
     # Window Manager
     ../../windowmanager/niri.nix
