@@ -13,6 +13,7 @@
       unset -v SSH_ASKPASS
     '';
     sessionVariables = {
+      EDITOR = "nvim";
       WEBSITE_TAG_FILE = config.sops.secrets."WEBSITE_TAG".path;
     };
     systemPackages = [
