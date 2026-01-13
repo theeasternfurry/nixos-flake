@@ -53,6 +53,7 @@
 
           modules = [
             ./nixos/hardware/amd-pc/config.nix
+            sops-nix.nixosModules.sops
           ];
         };
 
