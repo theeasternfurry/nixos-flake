@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: secrets/.*\.yaml$  # Áp dụng cho mọi file .yaml trong thư mục secrets
+    age: "age1qe3jac9hdy5mlj5n3vp64gqc74euv4a8aazpwne447ytyah7xuwse026he"
