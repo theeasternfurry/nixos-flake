@@ -18,6 +18,7 @@
     ../../nix-features.nix
     ../../no-packages.nix
     ../../virtualisation.nix
+    ../../zram.nix
 
     # Window Manager
     ../../windowmanager/niri.nix
