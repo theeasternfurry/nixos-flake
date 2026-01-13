@@ -16,16 +16,17 @@
       EDITOR = "nvim";
       WEBSITE_TAG_FILE = config.sops.secrets."WEBSITE_TAG".path;
     };
-    systemPackages = [
-      pkgs.dmidecode
+    systemPackages = with pkgs; [
+      # Secrets
+      age  # Generate key
+      sops # Open/Close secrets
 
-      # Tools
-      pkgs.efibootmgr
-      pkgs.usbutils
-
-      pkgs.htop
-      pkgs.virt-manager
-      pkgs.pciutils
+      dmidecode
+      efibootmgr
+      usbutils
+      htop
+      virt-manager
+      pciutils
     ];
   };
 }
