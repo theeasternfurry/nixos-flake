@@ -4,12 +4,14 @@
   imports = [
     # Specific config for amd-pc
     ./hardware.nix
+    ./sops.nix
     ./zram.nix
 
     ../../boot-loader.nix
     ../../printing.nix
     ../../sound.nix
     ../../networking.nix
+    ../../oci-containers.nix
 
     # NixOS system config
     ../../environment.nix
