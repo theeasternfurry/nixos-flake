@@ -39,6 +39,7 @@ in
 
           # Games
           prismlauncher
+          superTuxKart
 
           # Icons
           catppuccin-cursors.latteLight
