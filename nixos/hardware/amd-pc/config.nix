@@ -3,6 +3,7 @@
 {
   imports = [
     # Specific config for amd-pc
+    ./acme.nix
     ./hardware.nix
     ./sops.nix
     ./zram.nix
@@ -28,8 +29,10 @@
     # Services
     ../../services/flatpak.nix
     ../../services/playetctld.nix
+    ../../services/nginx.nix
     ../../services/ollama.nix
     ../../services/openssh.nix
+    ../../services/postgresql.nix
     ../../services/udev.nix
 
     # Programs
