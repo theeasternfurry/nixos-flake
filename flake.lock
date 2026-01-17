@@ -128,11 +128,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768366276,
-        "narHash": "sha256-NUdsaB6H1wvbOC7oh1UZ7Ojg1I+mYBQv8ovlMB6FbHk=",
+        "lastModified": 1768598210,
+        "narHash": "sha256-kkgA32s/f4jaa4UG+2f8C225Qvclxnqs76mf8zvTVPg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "4e235a8746b195e335306d898f0cc93ad6c4564c",
+        "rev": "c47b2cc64a629f8e075de52e4742de688f930dc6",
         "type": "github"
       },
       "original": {
@@ -239,11 +239,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1768127708,
-        "narHash": "sha256-1Sm77VfZh3mU0F5OqKABNLWxOuDeHIlcFjsXeeiPazs=",
+        "lastModified": 1768564909,
+        "narHash": "sha256-Kell/SpJYVkHWMvnhqJz/8DqQg2b6PguxVWOuadbHCc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ffbc9f8cbaacfb331b6017d5a5abb21a492c9a38",
+        "rev": "e4bae1bd10c9c57b2cf517953ab70060a828ee6f",
         "type": "github"
       },
       "original": {
@@ -260,11 +260,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768361753,
-        "narHash": "sha256-1KzsroD05FL8aQw9jTsRC5iU3bkFgOCIi3YI0/KDjVg=",
+        "lastModified": 1768628032,
+        "narHash": "sha256-qSl9I8ChG8Xtc8DlUWg+Aj9OONz9UlJLywz0jInQjVU=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "c0d4852c75228080853c8ceef34ae2f6b388a0ad",
+        "rev": "cd20b706e072042af863446e6ed356154e3e0854",
         "type": "github"
       },
       "original": {
@@ -280,11 +280,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768296338,
-        "narHash": "sha256-EGLpLVsKDrT+XWlncDKK3LBM+C6Gm6tyLTIxWsLuHA0=",
+        "lastModified": 1768549203,
+        "narHash": "sha256-DxN7v8g8DO8gGJmgBJMo3fsSR3HEs+DFCXeKeHq61zA=",
         "ref": "refs/heads/master",
-        "rev": "dca652366ad0d005ac8ec7991417d88afcbcbd60",
-        "revCount": 725,
+        "rev": "d03c59768c680f052dff6e7a7918bbf990b0f743",
+        "revCount": 727,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -310,11 +310,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768271704,
-        "narHash": "sha256-jJqlW8A3OZ5tYbXphF7U8P8g/3Cn8PPwPa4YlJ/9agg=",
+        "lastModified": 1768481291,
+        "narHash": "sha256-NjKtkJraCZEnLHAJxLTI+BfdU//9coAz9p5TqveZwPU=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "691b8b6713855d0fe463993867291c158472fc6f",
+        "rev": "e085e303dfcce21adcb5fec535d65aacb066f101",
         "type": "github"
       },
       "original": {
