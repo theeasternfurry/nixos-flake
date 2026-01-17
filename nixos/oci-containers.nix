@@ -19,19 +19,12 @@
         username = "theeasternfurry";
         passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
       };
-      image = "ghcr.io/beautiful-blossom-garden/api:latest";
+      image = "ghcr.io/beautiful-blossom-garden/api:724bdc5bfadc02cab229b12660b5795f57e3de9d";
       ports = [ "0.0.0.0:5000:5000" ];
       extraOptions = [ "--network=host" ];
-      environment = {
-        DATABASE_URL = config.sops.secrets."DATABASE_URL".path;
-        JWT_LOGIN_SECRET = config.sops.secrets."JWT_LOGIN_SECRET".path;
-        JWT_AUTH_SECRET = config.sops.secrets."JWT_AUTH_SECRET".path;
-        JWT_EXP = config.sops.secrets."JWT_EXP".path;
-        USERNAME = config.sops.secrets."USERNAME".path;
-        PASSWORD = config.sops.secrets."PASSWORD".path;
-        PRODUCTION = config.sops.secrets."PRODUCTION".path;
-        OTP_SECRET = config.sops.secrets."OTP_SECRET".path;
-      };
+      environmentFiles = [ 
+        config.sops.secrets."api-env".path
+      ];
       autoStart = true;
     };
   };
