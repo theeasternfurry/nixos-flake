@@ -19,7 +19,7 @@
         username = "theeasternfurry";
         passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
       };
-      image = "ghcr.io/beautiful-blossom-garden/api:724bdc5bfadc02cab229b12660b5795f57e3de9d";
+      image = "ghcr.io/beautiful-blossom-garden/api:a9797c87fee5069efcbc57b8160754848048280d";
       ports = [ "0.0.0.0:5000:5000" ];
       extraOptions = [ "--network=host" ];
       environmentFiles = [ 
