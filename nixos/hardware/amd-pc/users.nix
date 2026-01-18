@@ -12,10 +12,10 @@
       description = "theeasternfurry";
       extraGroups = [
         "audio"
-        "docker"
         "input"
         "libvirtd"
         "networkmanager"
+        "podman"
         "render"
         "video"
         "wheel"

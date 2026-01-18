@@ -2,7 +2,7 @@
 
 {
   virtualisation.oci-containers = {
-    backend = "docker";
+    backend = "podman";
     containers."website" = {
       login = {
         registry = "ghcr.io";

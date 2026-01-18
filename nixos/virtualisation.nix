@@ -1,12 +1,8 @@
 {
   virtualisation = {
-    docker = {
+    podman = {
       enable = true;
-
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
+      defaultNetwork.settings.dns_enabled = true;
     };
     libvirtd.enable = true;
   };
