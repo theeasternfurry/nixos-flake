@@ -53,5 +53,6 @@
   hardware = {
     bluetooth.enable = true;
     firmwareCompression = "none";
+    opentabletdriver.enable = true;
   };
 }
