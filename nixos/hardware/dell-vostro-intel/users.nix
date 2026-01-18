@@ -46,6 +46,7 @@ in
           papirus-icon-theme
 
           # Internet
+          brave
           firefox
           librewolf
           element-desktop
