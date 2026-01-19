@@ -11,6 +11,7 @@
     environmentVariables = {
       OLLAMA_NUM_PARALLEL = "1"; # Chạy 1 người dùng thôi để tiết kiệm VRAM
       OLLAMA_MAX_LOADED_MODELS = "1";
+      OLLAMA_KEEP_ALIVE = "10m";
     };
     loadModels = [
       "deepseek-coder-v2:16b"
