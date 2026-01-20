@@ -29,6 +29,7 @@
     # Services
     ../../services/flatpak.nix
     ../../services/playetctld.nix
+    ../../services/matrix-continuwuity.nix
     ../../services/nginx.nix
     ../../services/ollama.nix
     ../../services/openssh.nix
