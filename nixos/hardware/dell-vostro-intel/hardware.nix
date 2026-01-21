@@ -2,6 +2,7 @@
   config,
   lib,
   modulesPath,
+  pkgs,
   ...
 }:
 
@@ -20,6 +21,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "i915.enable_dc=0" ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/788e5a1d-1df3-49e2-ac93-a73dde02e6a6";
@@ -50,8 +52,21 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   hardware = {
     bluetooth.enable = true;
+    cpu.x86.msr.enable = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        intel-media-driver
+        intel-vaapi-driver
+        libva-vdpau-driver
+        libvdpau-va-gl
+      ];
+    };
     firmwareCompression = "none";
     opentabletdriver.enable = true;
   };
