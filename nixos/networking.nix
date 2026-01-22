@@ -4,8 +4,8 @@
     hostName = "nixos";
     firewall = {
       enable = false;
-      allowedTCPPorts = [ 80 443 ];
-      allowedUDPPorts = [ 80 443 ];
+      allowedTCPPorts = [ 80 443 14004 14005 ];
+      allowedUDPPorts = [ 80 443 14006 ];
     };
     networkmanager = {
       enable = true;

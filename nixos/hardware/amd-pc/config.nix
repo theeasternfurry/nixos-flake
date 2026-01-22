@@ -5,7 +5,9 @@
     # Specific config for amd-pc
     ./acme.nix
     ./hardware.nix
+    ./nix-features.nix
     ./sops.nix
+    ./systemd.nix
     ./zram.nix
 
     ../../boot-loader.nix

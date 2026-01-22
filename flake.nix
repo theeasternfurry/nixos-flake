@@ -29,6 +29,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    veloren = {
+      url = "gitlab:veloren/veloren?ref=weekly";
+    };
   };
 
   outputs =
@@ -40,6 +44,7 @@
       quickshell,
       noctalia,
       sops-nix,
+      veloren,
     }@inputs:
     let
       inherit (self) outputs;
@@ -55,7 +60,7 @@
 
       nixosConfigurations = {
         amd-pc = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs system; };
+          specialArgs = { inherit inputs outputs system veloren; };
 
           modules = [
             ./nixos/hardware/amd-pc/config.nix

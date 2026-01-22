@@ -15,7 +15,6 @@
         "input"
         "libvirtd"
         "networkmanager"
-        "podman"
         "render"
         "video"
         "wheel"
@@ -24,6 +23,7 @@
         with pkgs;
         [
           # Development
+          brave
           bruno
           godot
           obs-studio
@@ -41,14 +41,12 @@
           firefox
 
           # Tools
-          alacritty-graphics # Terminal
           fastfetch # Fetch system tools
-          helix # Terminal text editor
           lsd # ls with icons
           powerline-go # Powerline with icons
-          swww # Image
           termusic # Terminal Rust music player
           xfce.thunar # File manager
+          wezterm
           xwayland-satellite
           yazi
           zellij # Window multipletex
@@ -58,6 +56,8 @@
         ]
         ++ [
           inputs.nix-nvim.packages.${system}.default
+          inputs.noctalia.packages.${system}.default
+          inputs.veloren.packages.${system}.veloren-voxygen
         ];
     };
     thevalleyman = {
@@ -87,7 +87,6 @@
           # Tools
           alacritty-graphics # Terminal
           bottom # terminal system tool
-          helix # Terminal text editor
           kdePackages.ark
           lsd # ls with icons
           nwg-look # Change apperance
