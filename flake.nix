@@ -64,6 +64,12 @@
 
           modules = [
             ./nixos/hardware/amd-pc/config.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.theeasternfurry = ./home/home.nix;
+            }
             sops-nix.nixosModules.sops
           ];
         };
