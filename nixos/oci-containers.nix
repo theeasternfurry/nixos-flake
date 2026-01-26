@@ -10,7 +10,7 @@
           username = "theeasternfurry";
           passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
         };
-        image = "ghcr.io/beautiful-blossom-garden/website:b0259f2eb801255709b91b00d8d6a0a1d26f2346";
+        image = "ghcr.io/beautiful-blossom-garden/website:2cd429516658f8fd4377285b568fc449a01e6fd6";
         ports = [ "0.0.0.0:3000:3000" ];
         autoStart = true;
       };
