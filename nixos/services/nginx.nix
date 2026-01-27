@@ -47,5 +47,18 @@
         proxyWebsockets = true;
        };
     };
+
+    virtualHosts."storage.beautifulblossomgarden.io.vn" = {
+      enableACME = true;
+      forceSSL = true;
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:9000";
+        extraConfig = ''
+          charset utf-8;
+          source_charset utf-8;
+          proxy_set_header Host $host;
+        '';
+      };
+    };
  };
 }

@@ -14,6 +14,7 @@
         ports = [ "0.0.0.0:3000:3000" ];
         autoStart = true;
       };
+
       "api" = {
         login = {
           registry = "ghcr.io";
@@ -28,6 +29,7 @@
         ];
         autoStart = true;
       };
+
       "veloren-server" = {
         image = "registry.gitlab.com/veloren/veloren/server-cli:weekly";
         ports = [
@@ -46,6 +48,17 @@
           "-t"
           "--network=bridge"
         ];
+      };
+
+      "rustfs" = {
+        image = "rustfs/rustfs:latest";
+        extraOptions = [ "--user=0:0" "--privileged" ];
+        ports = [ "9000:9000" "9001:9001" ];
+        volumes = [
+          "/var/lib/rustfs/data:/data:Z"
+          "/var/lib/rustfs/logs:/logs:Z"
+        ];
+        autoStart = true;
       };
     };
   };
