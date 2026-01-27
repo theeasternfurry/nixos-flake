@@ -61,16 +61,22 @@
   amd-pc-packages = final: prev: {
     linux-firmware = prev.linux-firmware.overrideAttrs {
       installPhase = ''
+        mkdir -p $out/lib/firmware
+      
+        cp -r amd-ucode $out/lib/firmware
+
+        mkdir -p $out/lib/firmware/amdgpu
+        cp amdgpu/navy_flounder* $out/lib/firmware/amdgpu/
+
         mkdir -p $out/lib/firmware/intel
         mkdir -p $out/lib/firmware/intel/iwlwifi
-
-        cp -r amd-ucode $out/lib/firmware
-        cp -r amdgpu $out/lib/firmware
-
         install intel/iwlwifi/iwlwifi-3168-29.ucode $out/lib/firmware/intel/iwlwifi
         ln -s $out/lib/firmware/intel/iwlwifi/iwlwifi-3168-29.ucode $out/lib/firmware/iwlwifi-3168-29.ucode
 
         install intel/ibt-hw-37.8.10-fw-22.50.19.14.f.bseq $out/lib/firmware/intel
+
+        mkdir -p $out/lib/firmware/rtl_nic
+        install rtl_nic/rtl8168h-2.fw $out/lib/firmware/rtl_nic/
       '';
     };
   };
