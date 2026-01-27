@@ -11,21 +11,25 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = [
-    "nvme"
-    "xhci_pci"
-    "ahci"
-    "usb_storage"
-    "usbhid"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [
-    "kvm-amd"
-    "amdgpu"
-  ];
-  boot.extraModulePackages = [ ];
-  boot.blacklistedKernelModules = [ "radeon" ];
+  boot = {
+    initrd = {
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+        "usb_storage"
+        "usbhid"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
+    };
+    kernelModules = [
+      "kvm-amd"
+      "amdgpu"
+    ];
+    extraModulePackages = [ ];
+    blacklistedKernelModules = [ "radeon" ];
+  };
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/e579b0bb-f24f-42fa-b0d3-ea9db3456a29";
@@ -64,8 +68,6 @@
       enable32Bit = true;
       extraPackages = with pkgs; [
         rocmPackages.clr.icd
-      ];
-      extraPackages32 = with pkgs; [
       ];
     };
     amdgpu = {
