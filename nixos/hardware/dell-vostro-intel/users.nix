@@ -36,6 +36,7 @@ in
           obs-studio
           krita
           gnome-disk-utility
+          podman-compose
 
           # Games
           prismlauncher
@@ -47,11 +48,8 @@ in
 
           # Internet
           brave
-          firefox
-          librewolf
           element-desktop
           materialgram
-          microsoft-edge
           protonvpn-gui
           legcord
 
