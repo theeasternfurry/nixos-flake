@@ -25,6 +25,7 @@
           # Development
           brave
           bruno
+          drawio
           godot
           obs-studio
           krita
@@ -45,7 +46,6 @@
           lsd # ls with icons
           powerline-go # Powerline with icons
           termusic # Terminal Rust music player
-          xfce.thunar # File manager
           wezterm
           xwayland-satellite
           yazi
@@ -85,14 +85,12 @@
           firefox
 
           # Tools
-          alacritty-graphics # Terminal
           bottom # terminal system tool
-          kdePackages.ark
           lsd # ls with icons
           nwg-look # Change apperance
           powerline-go # Powerline with icons
-          xfce.thunar # File manager
           xwayland-satellite
+          wezterm
         ]
         ++ [
           inputs.noctalia.packages.${system}.default
