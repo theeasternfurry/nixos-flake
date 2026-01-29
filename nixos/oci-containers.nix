@@ -10,7 +10,7 @@
           username = "theeasternfurry";
           passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
         };
-        image = "ghcr.io/beautiful-blossom-garden/website:5aa49ecc4653319b31dff7ec3273988846bd7225";
+        image = "ghcr.io/beautiful-blossom-garden/website:8fdb63d24b4e112fba41fa9d1e65cd3e478336a7";
         ports = [ "0.0.0.0:3000:3000" ];
         autoStart = true;
       };
@@ -21,7 +21,7 @@
           username = "theeasternfurry";
           passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
         };
-        image = "ghcr.io/beautiful-blossom-garden/api:a34e63e7586def3b86b8a71f350ea1ecc8ba2c7f";
+        image = "ghcr.io/beautiful-blossom-garden/api:e56937c0c98d33c09a13eaa83510b2cb49647d21";
         ports = [ "0.0.0.0:5000:5000" ];
         extraOptions = [ "--network=host" ];
         environmentFiles = [ 
