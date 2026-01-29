@@ -64,6 +64,10 @@
       locations."/" = {
         proxyPass = "http://127.0.0.1:5000";
         proxyWebsockets = true;
+        extraConfig = ''
+          limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s;
+          limit_req zone=one burst=5 nodelay;
+        '';
        };
     };
 
