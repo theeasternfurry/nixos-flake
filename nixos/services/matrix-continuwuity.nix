@@ -15,7 +15,7 @@
         port = [
           6167
         ];
-        trusted_servers = [ "matrix.org" ];
+        trusted_servers = [ "matrix.org" "nixos.org" ];
       };
     };
   };

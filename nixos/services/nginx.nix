@@ -6,27 +6,46 @@
 
     virtualHosts."beautifulblossomgarden.io.vn" = {
       enableACME = true;
-      forceSSL = true;
-      
-      locations."/.well-known/matrix/server".extraConfig = ''
-        add_header Content-Type application/json;
+      forceSSL = false;
+      addSSL = true;
+
+      locations."/.well-known/matrix/" = {
+        extraConfig = ''
+          add_header Content-Type application/json;
+          add_header Access-Control-Allow-Origin *;
+        '';
+      };
+
+      locations."= /.well-known/matrix/server".extraConfig = ''
         return 200 '{"m.server": "matrix.beautifulblossomgarden.io.vn:443"}';
       '';
-
-      locations."/.well-known/matrix/client".extraConfig = ''
-        add_header Content-Type application/json;
-        add_header Access-Control-Allow-Origin *;
+      locations."= /.well-known/matrix/client".extraConfig = ''
         return 200 '{"m.homeserver": {"base_url": "https://matrix.beautifulblossomgarden.io.vn"}}';
       '';
 
-      locations."/".return = "301 https://www.beautifulblossomgarden.io.vn$request_uri";
+      locations."/" = {
+        extraConfig = ''
+          if ($scheme = "http") {
+            return 301 https://www.beautifulblossomgarden.io.vn$request_uri;
+          }
+          return 301 https://www.beautifulblossomgarden.io.vn$request_uri;
+        '';
+      };
     };
 
     virtualHosts."matrix.beautifulblossomgarden.io.vn" = {
       enableACME = true;
       forceSSL = true;
-      locations."/_matrix/" = {
+      locations."/" = {
         proxyPass = "http://127.0.0.1:6167";
+        proxyWebsockets = true;
+        extraConfig = ''
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+          proxy_buffering off;
+        '';
       };
     };
 
