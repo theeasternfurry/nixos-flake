@@ -56,6 +56,18 @@
       '';
     };
 
+    yt-dlp = prev.yt-dlp.overrideAttrs {
+      version = "2026-01-29";
+
+      src = prev.fetchFromGitHub {
+        owner = "yt-dlp";
+        repo = "yt-dlp";
+        rev = "309b03f2ad09fcfcf4ce81e757f8d3796bb56add";
+        hash = "sha256-Lg/b3LWMeKwiU14GiH+oH2H/e9ysUgICOEzGLqyFFMU=";
+      };
+
+      postPatch = "";
+    };
   };
 
   amd-pc-packages = final: prev: {

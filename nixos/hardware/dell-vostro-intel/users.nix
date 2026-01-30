@@ -68,12 +68,11 @@ in
           bluetui # Bluetooth tui
           fastfetch # Fetch info system
           fzf # Fuzzy finder in Go
+          ffmpeg
           lsd # ls command in rust
           termusic
           yazi # file manager
-
-          # Windows
-          wineWowPackages.stableFull
+          yt-dlp
         ]
         ++ [
           inputs.nix-nvim.packages.${system}.default
