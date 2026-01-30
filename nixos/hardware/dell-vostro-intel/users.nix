@@ -75,7 +75,7 @@ in
           yt-dlp
         ]
         ++ [
-          inputs.nix-nvim.packages.${system}.default
+          inputs.nixvim.packages.${system}.default
           inputs.noctalia.packages.${system}.default
           inputs.quickshell.packages.${system}.default
         ];
