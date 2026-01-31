@@ -1,5 +1,15 @@
-{ veloren, ... }:
+{ veloren, pkgs, ... }:
 
 {
-  nix.registry.veloren.flake = veloren;
+  nix = {
+    package = pkgs.nixVersions.stable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+    settings = {
+      auto-optimise-store = true;
+      max-jobs = 1;
+    };
+    registry.veloren.flake = veloren;
+  };
 }

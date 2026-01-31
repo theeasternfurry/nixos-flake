@@ -6,22 +6,21 @@
     ./acme.nix
     ./hardware.nix
     ./nix-features.nix
+    ./oci-containers.nix
     ./sops.nix
-    ./systemd.nix
+    ./users.nix
     ./zram.nix
 
     ../../boot-loader.nix
     ../../printing.nix
     ../../sound.nix
     ../../networking.nix
-    ../../oci-containers.nix
 
     # NixOS system config
     ../../environment.nix
     ../../fonts.nix
     ../../insecure-pkgs.nix
     ../../input-method.nix
-    ../../nix-features.nix
     ../../no-packages.nix
     ../../virtualisation.nix
 
@@ -44,10 +43,6 @@
     ../../programs/steam.nix
 
     ../../nix-ld.nix
-
-    # Users
-    ./users.nix
-
     ../../xdg.nix
   ];
 
