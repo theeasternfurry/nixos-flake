@@ -55,7 +55,7 @@
           legcord
         ]
         ++ [
-          inputs.nix-nvim.packages.${system}.default
+          inputs.nixvim.packages.${system}.default
           inputs.noctalia.packages.${system}.default
           inputs.veloren.packages.${system}.veloren-voxygen
         ];
