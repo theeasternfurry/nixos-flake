@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   virtualisation.oci-containers = {
@@ -21,7 +21,7 @@
           username = "theeasternfurry";
           passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
         };
-        image = "ghcr.io/beautiful-blossom-garden/api:e56937c0c98d33c09a13eaa83510b2cb49647d21";
+        image = "ghcr.io/beautiful-blossom-garden/api:a5bf31f4c7a7772ea5accb5f6922a3826ab1236c";
         ports = [ "0.0.0.0:5000:5000" ];
         extraOptions = [ "--network=host" ];
         environmentFiles = [ 
