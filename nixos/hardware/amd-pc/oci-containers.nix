@@ -10,7 +10,11 @@
           username = "theeasternfurry";
           passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
         };
-        image = "ghcr.io/beautiful-blossom-garden/website:8fdb63d24b4e112fba41fa9d1e65cd3e478336a7";
+        image = "ghcr.io/beautiful-blossom-garden/website:latest";
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [ "--pull=always" ];
         ports = [ "0.0.0.0:3000:3000" ];
         autoStart = true;
       };
@@ -21,9 +25,12 @@
           username = "theeasternfurry";
           passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
         };
-        image = "ghcr.io/beautiful-blossom-garden/api:a5bf31f4c7a7772ea5accb5f6922a3826ab1236c";
+        image = "ghcr.io/beautiful-blossom-garden/api:latest";
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [ "--network=host" "--pull=always" ];
         ports = [ "0.0.0.0:5000:5000" ];
-        extraOptions = [ "--network=host" ];
         environmentFiles = [ 
           config.sops.secrets."api-env".path
         ];
@@ -32,6 +39,15 @@
 
       "veloren-server" = {
         image = "registry.gitlab.com/veloren/veloren/server-cli:weekly";
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [
+          "-i"
+          "-t"
+          "--network=bridge"
+          "--pull=always"
+        ];
         ports = [
           "14004:14004"
           "14005:14005"
@@ -43,17 +59,15 @@
         environment = {
           "RUST_LOG" = "debug,common::net=info";
         };
-        extraOptions = [
-          "-i"
-          "-t"
-          "--network=bridge"
-        ];
         autoStart = false;
       };
 
       "rustfs" = {
         image = "rustfs/rustfs:latest";
-        extraOptions = [ "--user=0:0" "--privileged" ];
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [ "--user=0:0" "--privileged" "--replace" "--pull=always" ];
         ports = [ "9000:9000" "9001:9001" ];
         volumes = [
           "/var/lib/rustfs/data:/data:Z"
