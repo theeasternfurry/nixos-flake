@@ -23,22 +23,19 @@
         with pkgs;
         [
           # Development
-          brave
           bruno
           drawio
-          godot
           obs-studio
           krita
           gnome-disk-utility
-
-          # Games
-          prismlauncher
+          podman-compose
 
           # Icons
           catppuccin-cursors.latteLight
           papirus-icon-theme
 
           # Internet
+          brave
           firefox
 
           # Tools
