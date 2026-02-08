@@ -63,7 +63,7 @@
       };
 
       "rustfs" = {
-        image = "rustfs/rustfs:latest";
+        image = "docker.io/rustfs/rustfs:latest";
         labels = {
           "io.containers.autoupdate" = "image";
         };
