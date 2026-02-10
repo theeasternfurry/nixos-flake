@@ -28,7 +28,6 @@
     ../../windowmanager/niri.nix
 
     # Services
-    ../../services/flatpak.nix
     ../../services/playetctld.nix
     ../../services/matrix-continuwuity.nix
     ../../services/nginx.nix
