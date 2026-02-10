@@ -1,12 +1,25 @@
 {
   custom-packages = final: prev: {
-    fcitx5-unikey = prev.kdePackages.fcitx5-unikey.overrideAttrs {
+    #fcitx5-unikey = prev.kdePackages.fcitx5-unikey.overrideAttrs {
+    #  src = prev.fetchFromGitHub {
+    #    owner = "theeasternfurry";
+    #    repo = "fcitx5-unikey";
+    #    rev = "e5662d38785c904064de46330c0c6d73afbda7d0";
+    #    hash = "sha256-Yeyk6c4bjsxTi8DvRBGip/gayKaOvO6R5PGYkc0uUdk=";
+    #  };
+    #};
+
+    yt-dlp = prev.yt-dlp.overrideAttrs {
+      version = "2026-01-29";
+
       src = prev.fetchFromGitHub {
-        owner = "theeasternfurry";
-        repo = "fcitx5-unikey";
-        rev = "e5662d38785c904064de46330c0c6d73afbda7d0";
-        hash = "sha256-Yeyk6c4bjsxTi8DvRBGip/gayKaOvO6R5PGYkc0uUdk=";
+        owner = "yt-dlp";
+        repo = "yt-dlp";
+        rev = "637ae202aca7a990b3b61bc33d692870dc16c3ad";
+        hash = "sha256-WT+Lwffp/rYqD0BBK8Vr/1bBxNEB6waEVTLVMhxxuF0=";
       };
+
+      postPatch = "";
     };
   };
 
@@ -54,19 +67,6 @@
         # Realtek sd card reader
         install rtl_nic/rtl8168h-2.fw $out/lib/firmware/rtl_nic
       '';
-    };
-
-    yt-dlp = prev.yt-dlp.overrideAttrs {
-      version = "2026-01-29";
-
-      src = prev.fetchFromGitHub {
-        owner = "yt-dlp";
-        repo = "yt-dlp";
-        rev = "309b03f2ad09fcfcf4ce81e757f8d3796bb56add";
-        hash = "sha256-Lg/b3LWMeKwiU14GiH+oH2H/e9ysUgICOEzGLqyFFMU=";
-      };
-
-      postPatch = "";
     };
   };
 

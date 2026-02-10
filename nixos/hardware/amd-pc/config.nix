@@ -49,6 +49,7 @@
   nixpkgs = {
     overlays = [
       outputs.overlays.amd-pc-packages
+      outputs.overlays.custom-packages
     ];
 
     # Configure your nixpkgs instance

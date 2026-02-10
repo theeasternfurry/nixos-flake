@@ -40,12 +40,14 @@
 
           # Tools
           fastfetch # Fetch system tools
+          ffmpeg
           lsd # ls with icons
           powerline-go # Powerline with icons
           termusic # Terminal Rust music player
           wezterm
           xwayland-satellite
           yazi
+          yt-dlp
           zellij # Window multipletex
 
           protonvpn-gui
@@ -71,9 +73,6 @@
       packages =
         with pkgs;
         [
-          # Development
-          godot
-
           # Icons
           catppuccin-cursors.latteLight
           papirus-icon-theme
