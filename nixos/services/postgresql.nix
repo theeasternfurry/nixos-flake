@@ -4,7 +4,7 @@
   services.postgresql = {
     enable = true;
     package = pkgs.postgresql_17;
-    ensureDatabases = [ "blossomgarden" ];
+    ensureDatabases = [ "blossomgarden" "blossomgarden-trading" ];
     ensureUsers = [
       {
         name = "blossomgarden";
