@@ -45,18 +45,6 @@
     ../../xdg.nix
   ];
 
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.amd-pc-packages
-      outputs.overlays.custom-packages
-    ];
-
-    # Configure your nixpkgs instance
-    config = {
-      allowUnfree = true;
-    };
-  };
-
   # Set your time zone.
   time.timeZone = "Asia/Ho_Chi_Minh";
 
