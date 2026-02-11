@@ -55,6 +55,21 @@
         autoStart = true;
       };
 
+      "bot-trading" = {
+        login = {
+          registry = "ghcr.io";
+          username = "theeasternfurry";
+          passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
+        };
+        image = "ghcr.io/beautiful-blossom-garden/bot-trading:latest";
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [ "--network=host" "--pull=always" ];
+        ports = [ "0.0.0.0:50051:50051" ];
+        autoStart = true;
+      };
+
       "veloren-server" = {
         image = "registry.gitlab.com/veloren/veloren/server-cli:weekly";
         labels = {
