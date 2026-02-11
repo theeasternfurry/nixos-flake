@@ -29,8 +29,8 @@
 
     virtualHosts."beautifulblossomgarden.io.vn" = {
       enableACME = true;
-      forceSSL = false;
-      addSSL = true;
+      forceSSL = true;
+      globalRedirect = "www.beautifulblossomgarden.io.vn";
 
       locations."/.well-known/matrix/" = {
         extraConfig = ''
@@ -45,15 +45,6 @@
       locations."= /.well-known/matrix/client".extraConfig = ''
         return 200 '{"m.homeserver": {"base_url": "https://matrix.beautifulblossomgarden.io.vn"}}';
       '';
-
-      locations."/" = {
-        extraConfig = ''
-          if ($scheme = "http") {
-            return 301 https://www.beautifulblossomgarden.io.vn$request_uri;
-          }
-          return 301 https://www.beautifulblossomgarden.io.vn$request_uri;
-        '';
-      };
     };
 
     virtualHosts."matrix.beautifulblossomgarden.io.vn" = {
@@ -89,6 +80,8 @@
         proxyWebsockets = true;
         extraConfig = ''
           limit_req zone=one burst=10 nodelay;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Real-IP $remote_addr;
         '';
        };
     };
@@ -102,6 +95,8 @@
           charset utf-8;
           source_charset utf-8;
           proxy_set_header Host $host;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Real-IP $remote_addr;
         '';
       };
     };
