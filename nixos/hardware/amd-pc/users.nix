@@ -43,6 +43,7 @@
           ffmpeg
           lsd # ls with icons
           powerline-go # Powerline with icons
+          rclone   # Backup tool to cloud storage
           termusic # Terminal Rust music player
           wezterm
           xwayland-satellite
