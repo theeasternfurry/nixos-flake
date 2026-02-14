@@ -28,6 +28,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     veloren = {
       url = "gitlab:veloren/veloren?ref=weekly";
     };
@@ -42,6 +47,7 @@
       quickshell,
       noctalia,
       sops-nix,
+      silentSDDM,
       veloren,
     }@inputs:
     let
@@ -69,6 +75,7 @@
               home-manager.users.theeasternfurry = ./home/home.nix;
             }
             sops-nix.nixosModules.sops
+            silentSDDM.nixosModules.default
           ];
         };
 
