@@ -39,6 +39,7 @@
           firefox
 
           # Tools
+          copyq
           fastfetch # Fetch system tools
           ffmpeg
           lsd # ls with icons
@@ -46,6 +47,7 @@
           rclone   # Backup tool to cloud storage
           termusic # Terminal Rust music player
           wezterm
+          wl-clipboard
           xwayland-satellite
           yazi
           yt-dlp
