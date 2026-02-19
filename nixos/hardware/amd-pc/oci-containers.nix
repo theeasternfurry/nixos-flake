@@ -37,6 +37,24 @@
         autoStart = true;
       };
 
+      "web-trading" = {
+        login = {
+          registry = "ghcr.io";
+          username = "theeasternfurry";
+          passwordFile = config.sops.secrets."GITHUB_TOKEN".path;
+        };
+        image = "ghcr.io/beautiful-blossom-garden/web-trading-next:latest";
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [ "--pull=always" ];
+        ports = [ "0.0.0.0:3001:3001" ];
+        environmentFiles = [ 
+          config.sops.secrets."web-trading-env".path
+        ];
+        autoStart = true;
+      };
+
       "api-trading" = {
         login = {
           registry = "ghcr.io";

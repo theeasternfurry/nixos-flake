@@ -10,5 +10,8 @@
   sops.secrets."api-trading-env" = {
     sopsFile = ../../../secrets/config-trading-shop.yaml; 
   };
+  sops.secrets."web-trading-env" = {
+    sopsFile = ../../../secrets/config-trading-shop.yaml; 
+  };
   sops.age.keyFile = "/home/theeasternfurry/.config/sops/age/keys.txt";
 }
