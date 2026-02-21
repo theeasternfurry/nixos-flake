@@ -23,6 +23,7 @@
     ../../input-method.nix
     ../../no-packages.nix
     ../../virtualisation.nix
+    ../../security.nix
 
     # Window Manager
     ../../windowmanager/niri.nix
