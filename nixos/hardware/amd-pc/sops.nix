@@ -10,6 +10,9 @@
   sops.secrets."api-trading-env" = {
     sopsFile = ../../../secrets/config-trading-shop.yaml; 
   };
+  sops.secrets."bot-trading-env" = {
+    sopsFile = ../../../secrets/config-trading-shop.yaml; 
+  };
   sops.secrets."web-trading-env" = {
     sopsFile = ../../../secrets/config-trading-shop.yaml; 
   };

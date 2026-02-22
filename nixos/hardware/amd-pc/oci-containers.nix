@@ -85,6 +85,9 @@
         };
         extraOptions = [ "--network=host" "--pull=always" ];
         ports = [ "0.0.0.0:50051:50051" ];
+        environmentFiles = [ 
+          config.sops.secrets."bot-trading-env".path
+        ];
         autoStart = true;
       };
 
