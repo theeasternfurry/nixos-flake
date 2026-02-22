@@ -21,13 +21,15 @@ rustPlatform.buildRustPackage {
   version = "unstable";
 
   src = fetchFromGitHub {
-    owner = "tramhao";
+    owner = "theeasternfurry";
     repo = "termusic";
-    rev = "46bb70558af7b7de8ac218b7cc351665f9e677d9";
-    hash = "sha256-y3Or+3y9DZRdbvfuprDAN+BMSqw1E5jfCxRTY0RHFVk=";
+    rev = "c9d0b258d48f9b8256c43ef366feca146d22062b";
+    hash = "sha256-Ry/IG6o4GGviVPpWzvsoXmSGRiSKfdhHwq9Fyr8uU/o=";
   };
 
-  cargoHash = "sha256-o9Y+PZsHJuY5MzUj80DbNUi0yTIYXv7caw/X0hIqTWc=";
+  cargoHash = "sha256-M+MIyvnOW/bWkH5LQT/fxbFPVs/eDA/jdhKqwGJVQQ8=";
+
+  RUSTFLAGS = "-C target-cpu=native";
 
   useNextest = true;
 

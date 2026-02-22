@@ -5,6 +5,9 @@
   ...
 }:
 
+let
+  termusic = pkgs.callPackage ../../../pkgs/termusic.nix { };
+in
 {
   users.users = {
     theeasternfurry = {
@@ -39,12 +42,14 @@
           firefox
 
           # Tools
+          bat
           copyq
           fastfetch # Fetch system tools
           ffmpeg
           lsd # ls with icons
           powerline-go # Powerline with icons
           rclone   # Backup tool to cloud storage
+          ripgrep
           termusic # Terminal Rust music player
           wezterm
           wl-clipboard
