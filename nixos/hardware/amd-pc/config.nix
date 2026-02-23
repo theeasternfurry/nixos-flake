@@ -29,6 +29,7 @@
     ../../windowmanager/niri.nix
 
     # Services
+    ../../services/direnv.nix
     ../../services/playetctld.nix
     ../../services/matrix-continuwuity.nix
     ../../services/nginx.nix
