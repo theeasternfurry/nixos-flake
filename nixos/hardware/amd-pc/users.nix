@@ -29,7 +29,6 @@ in
           bruno
           drawio
           obs-studio
-          krita
           gnome-disk-utility
           podman-compose
 
