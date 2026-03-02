@@ -13,6 +13,9 @@
       age  # Generate key
       sops # Open/Close secrets
 
+      rocmPackages.rocminfo
+      rocmPackages.rocm-smi
+
       dmidecode
       efibootmgr
       usbutils
