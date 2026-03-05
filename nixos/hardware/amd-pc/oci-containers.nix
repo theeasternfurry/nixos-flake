@@ -129,6 +129,48 @@
         ];
         autoStart = true;
       };
+
+      "jam-company-api" = {
+        login = {
+          registry = "ghcr.io";
+          username = "nguyennguyenkhang2511";
+          passwordFile = config.sops.secrets."GITHUB_TOKEN_ACC_K".path;
+        };
+        image = "ghcr.io/jamcompanyweb/api-core:latest";
+        autoStart = true;
+        ports = [ "0.0.0.0:8001:8001" ];
+        environmentFiles = [
+          config.sops.secrets."jam-company-api".path
+        ];
+        volumes = [
+          "/var/lib/jam-company/uploads:/app/uploads"
+        ];
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [
+          "--network=host"
+          "--pull=always"
+          "--user=1000:1000"
+        ];
+      };
+
+      "jam-company-website" = {
+        login = {
+          registry = "ghcr.io";
+          username = "nguyennguyenkhang2511";
+          passwordFile = config.sops.secrets."GITHUB_TOKEN_ACC_K".path;
+        };
+        image = "ghcr.io/jamcompanyweb/website:latest";
+        autoStart = true;
+        ports = [ "3002:3000" ];
+        labels = {
+          "io.containers.autoupdate" = "image";
+        };
+        extraOptions = [
+          "--pull=always"
+        ];
+      };
     };
   };
 
@@ -137,6 +179,7 @@
       "d /var/lib/veloren/userdata 0755 root root -"
       "d /var/lib/rustfs/data 0755 root root -"
       "d /var/lib/rustfs/logs 0755 root root -"
+      "d /var/lib/jam-company/uploads 0755 root root -"
     ];
   };
 }
