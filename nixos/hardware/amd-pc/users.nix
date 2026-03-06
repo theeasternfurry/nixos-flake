@@ -27,6 +27,7 @@ in
         [
           # Development
           bruno
+          dbeaver-bin
           drawio
           obs-studio
           gnome-disk-utility
