@@ -55,8 +55,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  programs.light.enable = true;
-
   services.gvfs.enable = true; # Mount, trash, and other functionalities
 
   system.stateVersion = "26.05";
