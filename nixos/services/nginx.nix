@@ -101,6 +101,29 @@
       };
     };
 
+    virtualHosts."trading-shop.beautifulblossomgarden.io.vn" = {
+      enableACME = true;
+      forceSSL = true;
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:3001";
+        proxyWebsockets = true;
+       };
+    };
+
+    virtualHosts."api-trading-shop.beautifulblossomgarden.io.vn" = {
+      enableACME = true;
+      forceSSL = true;
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:8000";
+        proxyWebsockets = true;
+        extraConfig = ''
+          limit_req zone=one burst=10 nodelay;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Real-IP $remote_addr;
+        '';
+       };
+    };
+
     virtualHosts."mocthuy.vn" = {
       enableACME = true;
       forceSSL = true;
