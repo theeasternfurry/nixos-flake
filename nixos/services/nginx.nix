@@ -25,6 +25,12 @@
       set_real_ip_from 198.41.128.0/17;
 
       real_ip_header CF-Connecting-IP;
+
+      map $http_cf_ipcountry $is_vietnam {
+        default 0;
+        VN 1;
+        "" 1;
+      }
     '';
 
     virtualHosts."beautifulblossomgarden.io.vn" = {
@@ -69,6 +75,11 @@
       locations."/" = {
         proxyPass = "http://127.0.0.1:3000";
         proxyWebsockets = true;
+        extraConfig = ''
+          if ($is_vietnam = 0) {
+            return 403;
+          }
+        '';
        };
     };
 
@@ -79,6 +90,9 @@
         proxyPass = "http://127.0.0.1:5000";
         proxyWebsockets = true;
         extraConfig = ''
+          if ($is_vietnam = 0) {
+            return 403;
+          }
           limit_req zone=one burst=10 nodelay;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-Real-IP $remote_addr;
@@ -92,6 +106,9 @@
       locations."/" = {
         proxyPass = "http://127.0.0.1:9000";
         extraConfig = ''
+          if ($is_vietnam = 0) {
+            return 403;
+          }
           charset utf-8;
           source_charset utf-8;
           proxy_set_header Host $host;
@@ -107,6 +124,11 @@
       locations."/" = {
         proxyPass = "http://127.0.0.1:3001";
         proxyWebsockets = true;
+        extraConfig = ''
+          if ($is_vietnam = 0) {
+            return 403;
+          }
+        '';
        };
     };
 
@@ -117,6 +139,9 @@
         proxyPass = "http://127.0.0.1:8000";
         proxyWebsockets = true;
         extraConfig = ''
+          if ($is_vietnam = 0) {
+            return 403;
+          }
           limit_req zone=one burst=10 nodelay;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-Real-IP $remote_addr;
