@@ -29,8 +29,27 @@
       map $http_cf_ipcountry $is_vietnam {
         default 0;
         VN 1;
-        "" 1;
       }
+
+      geo $block_non_cf {
+        default 1;
+        # Cloudflare IPv4
+        103.21.244.0/22 0;
+        103.22.200.0/22 0;
+        103.31.4.0/22 0;
+        104.16.0.0/13 0;
+        104.24.0.0/14 0;
+        108.162.192.0/18 0;
+        131.0.72.0/22 0;
+        141.101.64.0/18 0;
+        162.158.0.0/15 0;
+        172.64.0.0/13 0;
+        173.245.48.0/20 0;
+        188.114.96.0/20 0;
+        190.93.240.0/20 0;
+        197.234.240.0/22 0;
+        198.41.128.0/17 0;
+    }
     '';
 
     virtualHosts."beautifulblossomgarden.io.vn" = {
@@ -76,8 +95,12 @@
         proxyPass = "http://127.0.0.1:3000";
         proxyWebsockets = true;
         extraConfig = ''
-          if ($is_vietnam = 0) {
-            return 403;
+          if ($block_non_cf = 1) {
+            return 403 "Only Cloudflare allowed";
+          }
+
+          if ($http_cf_ipcountry != "VN") {
+            return 403 "Vietnam only";
           }
         '';
        };
@@ -90,9 +113,14 @@
         proxyPass = "http://127.0.0.1:5000";
         proxyWebsockets = true;
         extraConfig = ''
-          if ($is_vietnam = 0) {
-            return 403;
+          if ($block_non_cf = 1) {
+            return 403 "Only Cloudflare allowed";
           }
+
+          if ($http_cf_ipcountry != "VN") {
+            return 403 "Vietnam only";
+          }
+
           limit_req zone=one burst=10 nodelay;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-Real-IP $remote_addr;
@@ -106,9 +134,14 @@
       locations."/" = {
         proxyPass = "http://127.0.0.1:9000";
         extraConfig = ''
-          if ($is_vietnam = 0) {
-            return 403;
+          if ($block_non_cf = 1) {
+            return 403 "Only Cloudflare allowed";
           }
+
+          if ($http_cf_ipcountry != "VN") {
+            return 403 "Vietnam only";
+          }
+
           charset utf-8;
           source_charset utf-8;
           proxy_set_header Host $host;
@@ -125,8 +158,12 @@
         proxyPass = "http://127.0.0.1:3001";
         proxyWebsockets = true;
         extraConfig = ''
-          if ($is_vietnam = 0) {
-            return 403;
+          if ($block_non_cf = 1) {
+            return 403 "Only Cloudflare allowed";
+          }
+
+          if ($http_cf_ipcountry != "VN") {
+            return 403 "Vietnam only";
           }
         '';
        };
@@ -139,9 +176,14 @@
         proxyPass = "http://127.0.0.1:8000";
         proxyWebsockets = true;
         extraConfig = ''
-          if ($is_vietnam = 0) {
-            return 403;
+          if ($block_non_cf = 1) {
+            return 403 "Only Cloudflare allowed";
           }
+
+          if ($http_cf_ipcountry != "VN") {
+            return 403 "Vietnam only";
+          }
+
           limit_req zone=one burst=10 nodelay;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-Real-IP $remote_addr;
