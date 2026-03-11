@@ -13,11 +13,6 @@
 
     nixvim.url = "github:theeasternfurry/nixvim-config";
 
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,7 +39,6 @@
       nixpkgs,
       home-manager,
       nixvim,
-      quickshell,
       noctalia,
       sops-nix,
       silentSDDM,
