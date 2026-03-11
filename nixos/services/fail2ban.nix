@@ -7,9 +7,11 @@
       "10.0.0.0/8"        # mạng nội bộ
       "172.16.0.0/12"     # mạng nội bộ
       "192.168.0.0/16"    # mạng nội bộ
+      "171.252.35.53"
     ];
 
     # Ban tăng dần - càng tái phạm càng ban lâu
+    bantime = "24h";
     bantime-increment = {
       enable = true;           # Bật chế độ tăng thời gian ban
       multipliers = "1 2 4 8 16 32 64"; # Tăng gấp đôi sau mỗi lần
@@ -25,7 +27,7 @@
           enabled = true;
           filter = "nginx-botsearch";  # Filter có sẵn để bắt bot
           logpath = "/var/log/nginx/access.log";
-          maxretry = 5;                  # Chỉ 3 lần 404 là bay màu
+          maxretry = 3;                  # Chỉ 3 lần 404 là bay màu
           findtime = 300;                 # Trong vòng 5 phút
           bantime = "24h";                # Ban 1 ngày cho lần đầu
           action = "iptables-multiport[name=HTTP, port=\"http,https\"]";
