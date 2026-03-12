@@ -20,7 +20,7 @@
       ROC_ENABLE_PRE_VEGA = "1";
     };
     loadModels = [
-      "llama3.1:8b-instruct-q8_0"
+      "deepseek-r1:14b-qwen-distill-q4_K_M"
     ];
   };
 }
