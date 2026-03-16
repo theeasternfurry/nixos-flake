@@ -63,6 +63,8 @@
         # Bluetooth
         install intel/ibt-19-0-4.sfi $out/lib/firmware/intel
         install intel/ibt-19-0-4.ddc $out/lib/firmware/intel
+        ln -s $out/lib/firmware/intel/ibt-19-0-4.sfi $out/lib/firmware/intel/ibt-19-0-0.sfi
+        ln -s $out/lib/firmware/intel/ibt-19-0-4.ddc $out/lib/firmware/intel/ibt-19-0-0.ddc
 
         # Realtek sd card reader
         install rtl_nic/rtl8168h-2.fw $out/lib/firmware/rtl_nic
