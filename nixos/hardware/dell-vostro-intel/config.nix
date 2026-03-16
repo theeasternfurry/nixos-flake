@@ -25,6 +25,7 @@
     ../../windowmanager/niri.nix
 
     # Services
+    ../../services/direnv.nix
     ../../services/display-manager.nix
     ../../services/flatpak.nix
     ../../services/libinput.nix
@@ -61,8 +62,6 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
-  programs.light.enable = true;
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
 

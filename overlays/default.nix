@@ -61,8 +61,8 @@
         install i915/tgl_dmc_ver2_12.bin $out/lib/firmware/i915
 
         # Bluetooth
-        install intel/ibt-19-0-0.sfi $out/lib/firmware/intel
-        install intel/ibt-19-0-0.ddc $out/lib/firmware/intel
+        install intel/ibt-19-0-4.sfi $out/lib/firmware/intel
+        install intel/ibt-19-0-4.ddc $out/lib/firmware/intel
 
         # Realtek sd card reader
         install rtl_nic/rtl8168h-2.fw $out/lib/firmware/rtl_nic
