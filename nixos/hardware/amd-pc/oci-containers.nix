@@ -130,6 +130,7 @@
         autoStart = true;
       };
 
+      /*
       "jam-company-api" = {
         login = {
           registry = "ghcr.io";
@@ -171,6 +172,7 @@
           "--pull=always"
         ];
       };
+      */
     };
   };
 

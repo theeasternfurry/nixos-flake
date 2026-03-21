@@ -128,6 +128,7 @@
        };
     };
 
+    /*
     virtualHosts."mocthuy.vn" = {
       enableACME = true;
       forceSSL = true;
@@ -150,5 +151,6 @@
         '';
        };
     };
- };
+    */
+  };
 }
