@@ -15,8 +15,8 @@
       src = prev.fetchFromGitHub {
         owner = "yt-dlp";
         repo = "yt-dlp";
-        rev = "637ae202aca7a990b3b61bc33d692870dc16c3ad";
-        hash = "sha256-WT+Lwffp/rYqD0BBK8Vr/1bBxNEB6waEVTLVMhxxuF0=";
+        rev = "f01e1a1ced581c13f28c7da45eb6396cb9fff6e4";
+        hash = "sha256-HEa+cZsOqVwgaaFtGqkLLA75wAm1mrHbPgo/SodpntA=";
       };
 
       postPatch = "";
