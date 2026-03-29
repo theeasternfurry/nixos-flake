@@ -32,6 +32,7 @@ in
           obs-studio
           gnome-disk-utility
           podman-compose
+          openclaw
 
           # Icons
           catppuccin-cursors.latteLight
