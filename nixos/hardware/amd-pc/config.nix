@@ -32,6 +32,7 @@
     ../../services/blueman.nix
     ../../services/direnv.nix
     ../../services/fail2ban.nix
+    ../../services/flatpak.nix
     ../../services/playetctld.nix
     ../../services/matrix-continuwuity.nix
     ../../services/nginx.nix
