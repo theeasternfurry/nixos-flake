@@ -85,6 +85,7 @@
               home-manager.users.theeasternfurry = ./home/home.nix;
             }
             sops-nix.nixosModules.sops
+            silentSDDM.nixosModules.default
           ];
         };
       };
