@@ -37,6 +37,7 @@
     # Programs
     ../../programs/fish.nix
     ../../programs/git.nix
+    ../../programs/silentSDDM.nix
     ../../programs/steam.nix
 
     ../../nix-ld.nix
