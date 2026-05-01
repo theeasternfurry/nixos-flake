@@ -40,7 +40,7 @@ in
 
           # Games
           prismlauncher
-          superTuxKart
+          supertuxkart
 
           # Icons
           catppuccin-cursors.latteLight
@@ -50,7 +50,7 @@ in
           brave
           element-desktop
           materialgram
-          protonvpn-gui
+          proton-vpn
           legcord
 
           # Tools
@@ -59,7 +59,6 @@ in
           kid3 # Music tagger
           powerline-go # Powerline with icons
           quickgui
-          swww # Image
           vlc
           wezterm
           xwayland-satellite
