@@ -5,9 +5,9 @@
   ...
 }:
 
-let
-  termusic = pkgs.callPackage ../../../pkgs/termusic.nix { };
-in
+#let
+#  termusic = pkgs.callPackage ../../../pkgs/termusic.nix { };
+#in
 {
   users.users = {
     theeasternfurry = {
@@ -32,7 +32,18 @@ in
           obs-studio
           gnome-disk-utility
           podman-compose
-          openclaw
+
+          # Rust development
+          rustc
+          cargo
+          rust-analyzer
+          rustfmt
+
+          # Nix development
+          nixd
+
+          # Python development
+          ty
 
           # Icons
           catppuccin-cursors.latteLight
@@ -41,6 +52,8 @@ in
           # Internet
           brave
           firefox
+          proton-vpn
+          legcord
 
           # Tools
           bat
@@ -58,9 +71,6 @@ in
           yazi
           yt-dlp
           zellij # Window multipletex
-
-          protonvpn-gui
-          legcord
         ]
         ++ [
           inputs.nixvim.packages.${system}.default

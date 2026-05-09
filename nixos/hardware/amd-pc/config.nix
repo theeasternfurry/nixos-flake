@@ -1,5 +1,3 @@
-{ outputs, ... }:
-
 {
   imports = [
     # Specific config for amd-pc
