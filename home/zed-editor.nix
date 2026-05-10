@@ -7,6 +7,7 @@
       "github-actions"
       "nix"
       "toml"
+      "proto"
     ];
     userSettings = {
       auto_update = false;
@@ -23,6 +24,10 @@
         };
         "Python" = {
           language_servers = [ "ty" "!pyright" ];
+        };
+        "Proto" = {
+          tab_size = 2;
+          hard_tabs = false;
         };
       };
 
