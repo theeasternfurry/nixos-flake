@@ -30,6 +30,7 @@
     ../../services/blueman.nix
     ../../services/direnv.nix
     ../../services/fail2ban.nix
+    ../../services/fcitx5-lotus.nix
     ../../services/flatpak.nix
     ../../services/playetctld.nix
     ../../services/matrix-continuwuity.nix

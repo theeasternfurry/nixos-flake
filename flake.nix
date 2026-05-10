@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    fcitx5-lotus = {
+      url = "github:LotusInputMethod/fcitx5-lotus";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixvim.url = "github:theeasternfurry/nixvim-config";
 
     noctalia = {
@@ -38,6 +43,7 @@
       self,
       nixpkgs,
       home-manager,
+      fcitx5-lotus,
       nixvim,
       noctalia,
       sops-nix,
@@ -70,6 +76,7 @@
             }
             sops-nix.nixosModules.sops
             silentSDDM.nixosModules.default
+            fcitx5-lotus.nixosModules.fcitx5-lotus
           ];
         };
 
