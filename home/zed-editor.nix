@@ -23,6 +23,7 @@
           language_servers = [ "nixd" "!nil" ];
         };
         "Python" = {
+          tab_size = 4;
           language_servers = [ "ty" "!pyright" ];
         };
         "Proto" = {
@@ -47,6 +48,7 @@
         ty = {
           binary = {
             path = lib.getExe pkgs.ty;
+            arguments = ["server"];
           };
         };
       };
